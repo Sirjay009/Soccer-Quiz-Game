@@ -51,7 +51,9 @@ h2 {
 
 /*Game Section*/
 #image-shower {
-
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
 }
 
 .choice-container {

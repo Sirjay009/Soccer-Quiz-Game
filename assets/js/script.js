@@ -41,6 +41,6 @@ imageArray = [
 
 function getRandomImg() {
     randomIndex = Math.floor(Math.random() * imageArray.length);
-    selectedImage = imageArray[randomIndex]
-    document.getElementById("image-shower").src = `./images/${selectedImage}`
+    selectedImage = imageArray[randomIndex];
+    document.getElementById("image-shower").src = `./images/${selectedImage}`;
 }
