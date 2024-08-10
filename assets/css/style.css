@@ -1,6 +1,7 @@
 /*Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*General Style*/
 :root {
     background-color: #ecf5ff;
     font-size: 64%;
@@ -18,8 +19,12 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 2rem;  
 }
 
 /*Quiz Container*/
@@ -27,11 +32,13 @@ h1 {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+    background-color: aqua;
 }
 
 .quiz-container > * {
@@ -42,13 +49,7 @@ h1 {
     display: none;
 }
 
-/*Game Area*/
-#game-area {
-    background-color: aqua;
-    height: 65vh;
-    padding: 1%;
-}
-
+/*Game Section*/
 #image-container {
 
 }
@@ -81,9 +82,18 @@ h1 {
 .score-area {
     margin: 5px auto;
     width: 60%;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
+/*Reset Section*/
+#btn-reset {
+    background-color: orange;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*Scores Section*/
 #score {
     color: green;
     font-weight: bold;
