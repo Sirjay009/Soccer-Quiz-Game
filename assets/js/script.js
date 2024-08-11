@@ -1,6 +1,7 @@
 //Define DOM elements
-const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+const imageElement = document.getElementById("soccer-image");
+const options = document.querySelectorAll(".choice-text");
+const scoreElement = document.getElementById("score");
 
 //Create some question variables
 
