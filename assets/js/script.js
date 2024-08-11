@@ -1,294 +1,100 @@
-//Define DOM elements
-const imageElement = document.getElementById("soccer-image");
-const options = document.querySelectorAll(".choice-text");
-const scoreElement = document.getElementById("score");
+//Define player data array
+const players = [
+    { name: "Alisson Becker", img: "assets/images/AlissonBecker.jpg" },
+    { name: "André Onana", img: "assets/images/AndréOnana.jpg" },
+    { name: "Antoine Griezmann", img: "assets/images/AntoineGriezmann.jpg" },
+    { name: "AntonioRüdiger", img: "assets/images/AntonioRüdiger.jpg" },
+    { name: "Bernardo Silva", img: "assets/images/BernardoSilva.png" },
+    { name: "Bukayo Saka", img: "assets/images/BukayoSaka.jpg" },
+    { name: "Cristiano Ronaldo", img: "assets/images/CristianoRonaldo.jpg" },
+    { name: "Declan Rice", img: "assets/images/DeclanRice.jpg" },
+    { name: "Erling Haaland", img: "assets/images/ErlingHaaland.jpg" },
+    { name: "Florian Wirtz", img: "assets/images/FlorianWirtz.jpg" },
+    { name: "Harry Kane", img: "assets/images/HarryKane.jpg" },
+    { name: "Jamal Musiala", img: "assets/images/JamalMusiala.jpg" },
+    { name: "Jude Bellingham", img: "assets/images/JudeBellingham.jpg" },
+    { name: "Kevin De Bruyne", img: "assets/images/KevinDeBruyne.jpg" },
+    { name: "Kylian Mbappé", img: "assets/images/KylianMbappe.jpg" },
+    { name: "Lamine Yamal", img: "assets/images/LamineYamal.jpg" },
+    { name: "Lionel Messi", img: "assets/images/LionelMessi.jpg" },
+    { name: "Luka Modrić", img: "assets/images/LukaModric.jpg" },
+    { name: "Martin Ødegaard", img: "assets/images/MartinOdegaard.jpg" },
+    { name: "Mohamed Salah", img: "assets/images/MohamedSalah.jpg" },
+    { name: "Phil Foden", img: "assets/images/PhilFoden.jpg" },
+    { name: "Robert Lewandowski", img: "assets/images/RobertLewandowski.jpg" },
+    { name: "Rodri", img: "assets/images/Rodri.jpg" },
+    { name: "Sadio Mané", img: "assets/images/SadioMané.jpg" },
+    { name: "Son Heung-min", img: "assets/images/SonHeung-min.png" },
+    { name: "Toni Kroos", img: "assets/images/ToniKroos.jpg" },
+    { name: "Victor Osimhen", img: "assets/images/VictorOsimhen.jpg" },
+    { name: "Vigil van Dijk", img: "assets/images/VigilvanDijk.jpg" },
+    { name: "Vincent Aboubakar", img: "assets/images/VincentAboubakar.jpg" },
+    { name: "Vinicius Jr", img: "assets/images/ViniciusJr.jpg" },
+  ];
+  
 
-//Create some question variables
+//Let's select a random player from the array
 
-let score = 0;
-let currentQuestion;
+function getRandomPlayer() {
+    return players[Math.floor(Math.random() * players.length)];
+  }
 
-const questions = [
-    {
-        image: "assets/images/AlissonBecker.jpg",
-        option1: ["Kevin De Bruyne"],
-        option2: ["Alisson Becker"],
-        option3: ["Phil Foden"],
-        answer : 2
-        
-    },
+  //Let's generate random options including the correct answer
 
-    {
-        image: "assets/images/AndréOnana.jpg",
-        option1: ["André Onana"],
-        option2: ["Vincent Aboubakar"],
-        option3: ["Sadio Mané"],
-        answer : 1
-        
-    },
-
-    {
-        image: "assets/images/AntoineGriezmann.jpg",
-        option1: ["Florian Wirtz"],
-        option2: ["Declan Rice"],
-        option3: ["Antoine Griezmann"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/AntonioRüdiger.jpg",
-        option1: ["Antonio Rüdiger"],
-        option2: ["Jude Bellingham"],
-        option3: ["André Onana"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/BernardoSilva.png",
-        option1: ["Lamine Yamal"],
-        option2: ["Bernado Silva"],
-        option3: ["Harry Kane"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/BukayoSaka.jpg",
-        option1: ["Bukayo Saka"],
-        option2: ["JayJay Okocha"],
-        option3: ["Antonio Rüdiger"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/CristianoRonaldo.jpg",
-        option1: ["Son Heung-min"],
-        option2: ["Toni Kroos"],
-        option3: ["Cristiano Ronaldo"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/DeclanRice.jpg",
-        option1: ["Declan Rice"],
-        option2: ["Erling Haaland"],
-        option3: ["Rodri"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/ErlingHaaland.jpg",
-        option1: ["Luka Modric"],
-        option2: ["Erling Haaland"],
-        option3: ["Robert Lewandowski"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/FlorianWirtz.jpg",
-        option1: ["Alisson Becker"],
-        option2: ["Kevin De Bruyne"],
-        option3: ["Florian Wirtz"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/HarryKane.jpg",
-        option1: ["Harry Kane"],
-        option2: ["Martin Odegaard"],
-        option3: ["Jamal Musiala"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/JamalMusiala.jpg",
-        option1: ["Bernardo Silva"],
-        option2: ["Jamal Musiala"],
-        option3: ["Lamine Yamal"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/JudeBellingham.jpg",
-        option1: ["Vinicius Jr"],
-        option2: ["Victor Osimhen"],
-        option3: ["Jude Bellingham"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/KevinDeBruyne.jpg",
-        option1: ["Kevin De Bruyne"],
-        option2: ["Florian Wirtz"],
-        option3: ["Phil Foden"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/KylianMbappe.jpg",
-        option1: ["Kanu Nwankwo"],
-        option2: ["Kylian Mbappé"],
-        option3: ["Antonio Rüdiger"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/LamineYamal.jpg",
-        option1: ["Harry Kane"],
-        option2: ["Rodri"],
-        option3: ["Lamine Yamal"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/LionelMessi.jpg",
-        option1: ["Lionel Messi"],
-        option2: ["Cristiano Ronaldo"],
-        option3: ["Vigil van Dijk"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/LukaModric.jpg",
-        option1: ["Martin Odegaard"],
-        option2: ["Luka Modrić"],
-        option3: ["Vigil van Dijk"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/MartinOdegaard.jpg",
-        option1: ["Rodri"],
-        option2: ["Jamal Musiala"],
-        option3: ["Martin Ødegaard"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/MohamedSalah.jpg",
-        option1: ["Mohamed Salah"],
-        option2: ["Toni Kroos"],
-        option3: ["Martin Ødegaard"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/PhilFoden.jpg",
-        option1: ["Alisson Becker"],
-        option2: ["Phil Folden"],
-        option3: ["Robert Lewandowski"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/RobertLewandowski.jpg",
-        option1: ["Harry Kane"],
-        option2: ["Declan Rice"],
-        option3: ["Robert Lewandowski"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/Rodri.jpg",
-        option1: ["Rodri"],
-        option2: ["Son Heung-min"],
-        option3: ["Jamal Musiala"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/SadioMané.jpg",
-        option1: ["Vincent Aboubakar"],
-        option2: ["Sadio Mané"],
-        option3: ["Victor Osimhen"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/SonHeung-min.png",
-        option1: ["Declan Rice"],
-        option2: ["Antoine Griezmann"],
-        option3: ["Son Heung-min"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/ToniKroos.jpg",
-        option1: ["Toni Kroos"],
-        option2: ["Mohamed Salah"],
-        option3: ["Phil Foden"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/VictorOsimhen.jpg",
-        option1: ["Kylian Mbappé"],
-        option2: ["Victor Osimhen"],
-        option3: ["Vinicius Jr"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/VigilvanDijk.jpg",
-        option1: ["Robert Lewandowski"],
-        option2: ["Harry Kane"],
-        option3: ["Vigil van Dijk"],
-        answer : 3
-    },
-
-    {
-        image: "assets/images/VincentAboubakar.jpg",
-        option1: ["Vincent Aboubakar"],
-        option2: ["André Onana"],
-        option3: ["Samuel Eto'o"],
-        answer : 1
-    },
-
-    {
-        image: "assets/images/VincentAboubakar.jpg",
-        option1: ["André Onana"],
-        option2: ["Vincent Aboubakar"],
-        option3: ["Samuel Eto'o"],
-        answer : 2
-    },
-
-    {
-        image: "assets/images/ViniciusJr.jpg",
-        option1: ["Antonio Rüdiger"],
-        option2: ["André Onana"],
-        option3: ["Vinicius Jr"],
-        answer : 3
+  function generateOptions(correctPlayer) {
+    const options = [correctPlayer];
+    
+    while (options.length < 30) {
+      const randomPlayer = getRandomPlayer();
+      if (!options.includes(randomPlayer)) {
+        options.push(randomPlayer);
+      }
     }
-];
-
-function loadQuestion() {
-    // Randomly select a question
-    currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-
-    // Set the image source
-    imageElement.src = currentQuestion.image;
-
-    // Set the option text
-    options.forEach((option, index) => {
-        option.textContent = currentQuestion.options[index];
+    
+    return options.sort(() => Math.random() - 0.5);  // Shuffle options
+  }
+  
+//Function that displays the player's image and options
+  function displayPlayerAndOptions() {
+    const player = getRandomPlayer();
+    const options = generateOptions(player);
+    
+    document.getElementById("playerPic").src = player.img;
+    
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+    
+    options.forEach(option => {
+      const button = document.createElement("button");
+      button.textContent = option.name;
+      button.addEventListener("click", () => checkAnswer(option, player));
+      optionsDiv.appendChild(button);
     });
-}
+  }
 
-function checkAnswer(selectedOption) {
-    if (selectedOption === currentQuestion.correctAnswer) {
-        score++;
-        scoreElement.textContent = score;
+//This function checks the answer
+  function checkAnswer(selectedOption, correctPlayer) {
+    const result = document.getElementById("result");
+    
+    if (selectedOption.name === correctPlayer.name) {
+      result.textContent = "Correct!";
+      result.style.color = "green";
+    } else {
+      result.textContent = `Wrong! It was ${correctPlayer.name}.`;
+      result.style.color = "red";
     }
+    
+    document.getElementById("next").style.display = "block";
+  }
 
-    // Load the next question
-    loadQuestion();
-}
+//Code to ensures when the "next" button is clicked, a new random player's image and options display
+  document.getElementById("next").addEventListener("click", () => {
+    displayPlayerAndOptions();
+    document.getElementById("result").textContent = "";
+    document.getElementById("next").style.display = "none";
+  });
 
-// Event listeners for answer buttons
-options.forEach(option => {
-    option.addEventListener('click', () => {
-        checkAnswer(option.textContent);
-    });
-});
-
-// Load the first question
-loadQuestion();
+//Code that initializes the game when the page loads
+  window.onload = () => {
+    displayPlayerAndOptions();
+  };
