@@ -44,7 +44,7 @@ function getRandomPlayer() {
   function generateOptions(correctPlayer) {
     const options = [correctPlayer];
     
-    while (options.length < 30) {
+    while (options.length < 4) {
       const randomPlayer = getRandomPlayer();
       if (!options.includes(randomPlayer)) {
         options.push(randomPlayer);

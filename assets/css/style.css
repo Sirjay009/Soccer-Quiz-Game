@@ -2,49 +2,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*General Style*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    height: 100vh;
     text-align: center;
     background-color: #f0f0f0;
   }
-  
-  #game {
-    margin: 20px auto;
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+/*Game section*/
+#game {
     max-width: 400px;
+    margin: 20px auto;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #player-image img {
+}
+
+#player-image img {
     width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  #options button {
+    margin: 0 auto 20px;
     display: block;
+}
+
+#options button {
     width: 100%;
-    margin: 10px 0;
+    max-width: 400px;
+    margin: 10px auto;
     padding: 10px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  #options button:hover {
+    display: block;
+    font-weight: 600;
+    font-size: large;
+}
+
+#options button:hover {
     background-color: #0056b3;
-  }
-  
-  #result {
+}
+
+#result {
     font-size: 1.2em;
     margin: 10px 0;
-  }
-  
-  #next {
+}
+
+#next {
     display: none;
     padding: 10px 20px;
     background-color: #28a745;
@@ -52,10 +71,20 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  #next:hover {
-    background-color: #218838;
-  }
-  
+}
 
+#next:hover {
+    background-color: #218838;
+}
+
+/*Media queries to adjust the layout for different screen sizes particularly mobile devices*/
+@media (max-width: 768px) {
+    #game {
+      padding: 10px;
+    }
+  
+    #options button {
+      padding: 8px;
+      font-size: 16px;
+    }
+  }
