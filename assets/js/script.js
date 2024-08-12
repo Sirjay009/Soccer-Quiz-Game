@@ -77,14 +77,20 @@ function getRandomPlayer() {
     const result = document.getElementById("result");
     
     if (selectedOption.name === correctPlayer.name) {
-      result.textContent = "Correct!";
-      result.style.color = "green";
+      alert("Hey! You got it right! :D");
+      incrementScore();
     } else {
-      result.textContent = `Wrong! It was ${correctPlayer.name}.`;
-      result.style.color = "red";
+      alert(`Awww... you answered ${selectedOption.name}. The correct answer was ${correctPlayer.name}.!`);
+      incrementWrongAnswer();
     }
     
     document.getElementById("next").style.display = "block";
+  }
+
+  function incrementScore() {
+    //Gets the current score from the DOM and increments it
+
+    let oldscore = parseInt(documentgetElementById)
   }
 
 //Code to ensures when the "next" button is clicked, a new random player's image and options display

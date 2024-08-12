@@ -23,7 +23,7 @@ h1{
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1rem; 
+    margin: 1rem; 
 }
 
 /*Game section*/
@@ -37,9 +37,9 @@ h2 {
 }
 
 #player-image img {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     max-width: 300px;
-    height: auto;
     border-radius: 8px;
     margin: 0 auto 20px;
     display: block;
@@ -70,7 +70,7 @@ h2 {
 }
 
 #next {
-    display: none;
+    display: block;
     padding: 10px 20px;
     background-color: #28a745;
     color: white;
@@ -81,6 +81,26 @@ h2 {
 
 #next:hover {
     background-color: #218838;
+}
+
+.score-area {
+    margin: 2px auto;
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.scores {
+    display: inline-block;
+}
+
+#score {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
 }
 
 /*Media queries to adjust the layout for different screen sizes particularly mobile devices*/
