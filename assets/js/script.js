@@ -56,6 +56,7 @@ function getRandomPlayer() {
   
 //Function that displays the player's image and options
   function displayPlayerAndOptions() {
+    
     const player = getRandomPlayer();
     const options = generateOptions(player);
     
@@ -83,8 +84,8 @@ function getRandomPlayer() {
       alert(`Awww... you answered ${selectedOption.name}. The correct answer was ${correctPlayer.name}.!`);
       incrementWrongAnswer();
     }
-    
-    document.getElementById("next").style.display = "block";
+      document.getElementById("next").style.display = "block";
+    } 
   }
 
   function incrementScore() {
