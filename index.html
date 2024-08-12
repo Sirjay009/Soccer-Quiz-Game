@@ -16,11 +16,40 @@
 </head>
 
 <body>
-    
-      <div class="score-area">
-        <p class="scores">Correct Answers:<span id="score">0</span></p>
-        <p class="scores">Correct Answers:<span id="incorrect">0</span></p>
+    <div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <h1 id="header">Soccer Game Quiz</h1>
       </div>
+      <div class="quiz-body">
+        <h2 id="question">Who is the player in the picture?</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer">
+            <label for="a" id="a-text">Answers</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer">
+            <label for="b" id="a-text">Answers</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="c" class="answer">
+            <label for="c" id="a-text">Answers</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="d" class="answer">
+            <label for="d" id="a-text">Answers</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="e" class="answer">
+            <label for="e" id="a-text">Answers</label>
+          </li>
+        </ul>
+      </div>
+      <div class="quiz-footer">
+        <div class="quiz-details">1 of 5 Questions</div>
+        <button type="button" id="btn">Next</button>
+      </div>
+    </div>
         <script src="assets/js/script.js"></script>
 </body>
 
