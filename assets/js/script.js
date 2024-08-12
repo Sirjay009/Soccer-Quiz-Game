@@ -31,7 +31,9 @@ const players = [
     { name: "Vincent Aboubakar", img: "assets/images/VincentAboubakar.jpg" },
     { name: "Vinicius Jr", img: "assets/images/ViniciusJr.jpg" },
   ];
-  
+//Set the game counter
+let gameCount = 5;
+let counter = 0;
 
 //Let's select a random player from the array
 
@@ -76,17 +78,25 @@ function getRandomPlayer() {
 //This function checks the answer
   function checkAnswer(selectedOption, correctPlayer) {
     const result = document.getElementById("result");
+    counter += 1
     
     if (selectedOption.name === correctPlayer.name) {
-      alert("Hey! You got it right! :D");
+      result.textContent = "Correct!";
+      result.style.color = "green";
       incrementScore();
     } else {
-      alert(`Awww... you answered ${selectedOption.name}. The correct answer was ${correctPlayer.name}.!`);
+      result.textContent = `Wrong! It was ${correctPlayer.name}.`;
+      result.style.color = "red";
       incrementWrongAnswer();
     }
+    if(counter == gameCount) {
+      document.getElementById("next").style.display = "none";
+      endGame()
+    } else {
       document.getElementById("next").style.display = "block";
+    }
+      
     } 
-  }
 
   function incrementScore() {
     //Gets the current score from the DOM and increments it
@@ -105,3 +115,12 @@ function getRandomPlayer() {
   window.onload = () => {
     displayPlayerAndOptions();
   };
+
+ //Define and call the endGame function
+ function endGame() {
+  document.getElementById("end-message").style.display = "block";
+
+ }
+
+
+ 
