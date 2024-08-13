@@ -16,13 +16,20 @@
 </head>
 
 <body>
-    <div class="quiy-container" id="quiz">
+  <div class="welcome-page" style="display: none;">
+    <h1>Soccer Quiz Game</h1>
+    <p>Welcome to the soccer quiz game. Please press start when you are ready to begin the quiz.</p>
+    <button>Start Quiz!</button>
+  </div>
+    <div class="quiz-container" id="quiz">
       <div class="quiz-header">
         <h1 id="header">Soccer Game Quiz</h1>
       </div>
       <div class="quiz-body">
         <h2 id="question">Who is the player in the picture?</h2>
-        <img src=""  id="rand-pic"  alt="Randon picture">
+        <div class="image-container">
+          <img src="" id="random-player" alt="Random Player Image">
+        </div>
         <ul>
           <li>
             <input type="radio" name="answer" id="a" class="answer">
