@@ -18,6 +18,9 @@ body {
 }
 
 /*Game section*/
+.welcome-page {
+    background-color: antiquewhite;
+}
 
 .quiz-container {
     border-radius: 10px;

@@ -16,12 +16,12 @@
 </head>
 
 <body>
-  <div class="welcome-page" style="display: none;">
+  <div class="welcome-page" style="display: block;">
     <h1>Soccer Quiz Game</h1>
     <p>Welcome to the soccer quiz game. Please press start when you are ready to begin the quiz.</p>
-    <button>Start Quiz!</button>
+    <button id="startBtn">Start Quiz!</button>
   </div>
-    <div class="quiz-container" id="quiz">
+    <div class="quiz-container" id="quiz" style="display: none;">
       <div class="quiz-header">
         <h1 id="header">Soccer Game Quiz</h1>
       </div>
@@ -37,15 +37,15 @@
           </li>
           <li>
             <input type="radio" name="answer" id="b" class="answer">
-            <label for="b" id="a-text">Answers</label>
+            <label for="b" id="b-text">Answers</label>
           </li>
           <li>
             <input type="radio" name="answer" id="c" class="answer">
-            <label for="c" id="a-text">Answers</label>
+            <label for="c" id="c-text">Answers</label>
           </li>
           <li>
             <input type="radio" name="answer" id="d" class="answer">
-            <label for="d" id="a-text">Answers</label>
+            <label for="d" id="d-text">Answers</label>
           </li>
           <li>
             <input type="radio" name="answer" id="e" class="answer">
@@ -55,7 +55,7 @@
       </div>
       <div class="quiz-footer">
         <div class="quiz-details">1 of 5 Questions</div>
-        <button type="button" id="btn">Next</button>
+        <button type="button" id="btn" class="control">Next</button>
       </div>
     </div>
         <script src="assets/js/script.js"></script>
