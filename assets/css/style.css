@@ -18,6 +18,7 @@ body {
 }
 
 .welcome-page {
+    background-color: antiquewhite;
     display: flex;
     align-content: flex-start;
 }
@@ -33,9 +34,6 @@ body {
 }
 
 /*Game section*/
-.welcome-page {
-    background-color: antiquewhite;
-}
 
 .quiz-container {
     border-radius: 10px;
@@ -54,7 +52,8 @@ body {
 }
 
 .quiz-header h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 .quiz-body {
@@ -63,7 +62,6 @@ body {
 }
 
 .quiz-body h2 {
-    font-size: 2rem;
     padding: 1rem 0;
     font-weight: 500;
     text-align: center;
@@ -76,23 +74,34 @@ body {
     border-radius: 10px;
 }
 
-.quiz-body ul {
-    list-style: none;
-    padding: 0;
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
 }
 
-.quiz-body ul li {
-    margin: 1rem 0;
-    font-size: 1rem;
-    border: 1px solid #aab7b8;
-    padding: 0.7rem;
-    border-radius: 5px;
+.choice-container:hover {
     cursor: pointer;
+    box-shadow: 0 0.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-00.1rem);
+    transition: transform 150ms;
 }
 
-.quiz-body ul li label {
-    cursor: pointer;
-    padding: 0 0.4rem;
+.choice-prefix, .choice-text {
+    display: inline-block;
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #56a5eb;
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
 }
 
 .quiz-footer {
