@@ -129,21 +129,45 @@ const randomImage = document.getElementById("random-image");
 const choiceContainer = document.getElementById("choice-container");
 const submitButton = document.getElementById("submit-button");
 const message = document.getElementById("message");
+const countSection = document.getElementById("count");
 const nextButton = document.getElementById("next-btn");
 
-const aText = document.getElementById("a-text");
-const bText = document.getElementById("b-text");
-const cText = document.getElementById("c-text");
-const dText = document.getElementById("d-text");
-const eText = document.getElementById("e-text");
+const texts = {
+A : document.getElementById("a-text"),
+B : document.getElementById("b-text"),
+C : document.getElementById("c-text"),
+D : document.getElementById("d-text"),
+E : document.getElementById("e-text")
+}
 
-let gameCount = 5;
+
 let counter = 0;
+const gameCount = 5;
+let correctAnswer = "";
 
-button.addEventListener("click", function(){
-  playGame();
-})
+function startGame() {
+  welcomePage.classList.add("hidden");
+  gameContainer.classList.remove("hidden");
+  runGame();
+}
 
-function playGame() {
+function runGame() {
+  if(counter < gameCount) {
+    counter++;
+    countSection.textContent = `Count ${counter} of ${gameCount}`;
+
+    const player = players[Math.floor(Math.random() * players.length)];
+    correctAnswer = player.name;
+    randomImage.src = player.img;
+
+    const choices = shuffleArray([]);
+    texts.A.textContent = choices[0];
+    texts.B.textContent = choices[1];
+    texts.C.textContent = choices[2];
+    texts.D.textContent = choices[3];
+    texts.E.textContent = choices[4];
+  } else {
+    endGame();
+  }
 
 }
