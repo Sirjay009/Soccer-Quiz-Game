@@ -8,3 +8,116 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #abcd32;
+    color: #333;
+    overflow: hidden;
+}
+
+#welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    padding: 25px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+#welcome-page h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+#welcome-page p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black;
+}
+
+#start-button {
+    cursor: pointer;
+    padding: 1rem;
+    color: black;
+    margin-top: 2rem;
+    border-radius: 5px;
+    width: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-container {
+    border-radius: 15px;
+    box-shadow: 0 10px 2px rgba(100, 100, 100, 0.1);
+    max-width: 400px;
+    width: 100%;
+    height: 80%;
+}
+
+header h2 {
+    padding: 1rem 0;
+    font-weight: 500;
+}
+
+#random-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#choice-container {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
+}
+
+#choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+button {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #56a5eb;
+    margin-bottom: 1rem;
+    color: #56a5eb;
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 o.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    display: block;
+}
+
+#next-btn {
+    font-weight: bold;
+}

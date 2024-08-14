@@ -122,15 +122,14 @@ const players = [{
 ];
 
 //Declare constants for DOM elements and possible choices
-const welcomePage = document.getElementsByClassName("welcome-page");
+const welcomePage = document.getElementById("welcome-page");
 const StartButton = document.getElementById("start-button");
-const quizContainer = document.getElementsByClassName("quiz-container");
-const quizBody = document.getElementsByClassName("quiz-body");
-const imgContainer = document.getElementsByClassName("image-container");
-const playerImage = document.getElementById("random-player");
-const choiceText = document.getElementsByClassName("choice-text");
-const quizFooter = document.getElementsByClassName("quiz-footer");
-const nextButton = document.getElementById("btn");
+const gameContainer = document.getElementById("game-container");
+const randomImage = document.getElementById("random-image");
+const choiceContainer = document.getElementById("choice-container");
+const submitButton = document.getElementById("submit-button");
+const message = document.getElementById("message");
+const nextButton = document.getElementById("next-btn");
 
 const aText = document.getElementById("a-text");
 const bText = document.getElementById("b-text");

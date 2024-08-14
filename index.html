@@ -18,7 +18,8 @@
 <body>
   <div id="welcome-page" class="container">
     <h1>Soccer Quiz Game</h1>
-    <p>Welcome to the soccer quiz game. Please start when you are ready to begin the quiz</p>
+    <p>Welcome to the soccer quiz game</p>
+    <p>Press "Start Game" to begin</p>
     <button id="start-button">Start Game</button>
   </div>
   <div id="game-container" class="container hidden">
@@ -28,37 +29,37 @@
     <div id="image-container">
       <img id="random-image" src="" alt="Random player image">
     </div>
-    <div choice-container>
+    <div id="choice-container">
       <div>
-        <label for="firstChoice">A</label>
-        <input type="radio" name="choice" id="firstChoice">
+        <label for="a-text">A</label>
+        <input type="radio" name="choice" id="a-text">
         <span id="aLabel"></span>
       </div>
       <div>
-        <label for="secondChoice">B</label>
-        <input type="radio" name="choice" id="secondChoice">
+        <label for="b-text">B</label>
+        <input type="radio" name="choice" id="b-text">
         <span id="bLabel"></span>
       </div>
       <div>
-        <label for="thirdChoice">C</label>
-        <input type="radio" name="choice" id="thirdChoice">
+        <label for="c-text">C</label>
+        <input type="radio" name="choice" id="c-text">
         <span id="cLabel"></span>
       </div>
       <div>
-        <label for="fourthChoice">D</label>
-        <input type="radio" name="choice" id="fourthChoice">
+        <label for="d-text">D</label>
+        <input type="radio" name="choice" id="d-text">
         <span id="dLabel"></span>
       </div>
       <div>
-        <label for="fifthChoice">E</label>
-        <input type="radio" name="choice" id="fifthChoice">
+        <label for="e-text">E</label>
+        <input type="radio" name="choice" id="e-text">
         <span id="eLabel"></span>
       </div>
     </div>
     <button id="submit-button">Submit Answer</button>
     <p id="message"></p>
     <p id="count"></p>
-    <button id="next-btn">Next</button>
+    <button id="next-btn" class="hidden">Next</button>
   </div>
   
   <script src="assets/js/script.js"></script>
