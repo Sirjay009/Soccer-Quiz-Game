@@ -146,6 +146,10 @@ const players = [{
 }
 ];
 
+function myFunction() {
+  document.getElementById("welcome-page").style.display = "none";
+}
+
 function startGame() {
   welcomePage.classList.add("hidden");
   gameContainer.classList.remove("hidden");

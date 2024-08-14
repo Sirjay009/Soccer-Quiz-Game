@@ -13,7 +13,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #abcd32;
     color: #333;
     overflow: hidden;
 }
@@ -68,7 +67,7 @@ header h2 {
 
 #random-image {
     width: 200px;
-    height: auto;
+    height: 200px;
     margin-bottom: 20px;
     border-radius: 5px;
 }
