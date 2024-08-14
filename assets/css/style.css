@@ -17,6 +17,21 @@ body {
     overflow: hidden;
 }
 
+.welcome-page {
+    display: flex;
+    align-content: flex-start;
+}
+
+.welcome-page p {
+    padding: 2rem;
+}
+
+#startBtn {
+    cursor: pointer;
+    padding: 0 0.4rem;
+    align-self:center;
+}
+
 /*Game section*/
 .welcome-page {
     background-color: antiquewhite;

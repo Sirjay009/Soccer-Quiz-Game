@@ -122,6 +122,7 @@ const players = [{
 ];
 
 //Declare constants for DOM elements and possible choices
+const welcomePage = document.getElementsByClassName("welcome-page");
 const button = document.getElementById("startBtn");
 const quizContainer = document.getElementsByClassName("quiz-container");
 const quizBody = document.getElementsByClassName("quiz-body");
@@ -136,8 +137,13 @@ const cText = document.getElementById("c-text");
 const dText = document.getElementById("d-text");
 const eText = document.getElementById("e-text");
 
-startBtn.addEventListener("click", playGame);
+let gameCount = 5;
+let counter = 0;
+
+button.addEventListener("click", function(){
+  playGame();
+})
 
 function playGame() {
-  
+
 }
