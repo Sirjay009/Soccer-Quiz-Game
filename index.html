@@ -16,6 +16,50 @@
 </head>
 
 <body>
+  <div id="welcome-page" class="container">
+    <h1>Soccer Quiz Game</h1>
+    <p>Welcome to the soccer quiz game. Please start when you are ready to begin the quiz</p>
+    <button id="start-button">Start Game</button>
+  </div>
+  <div id="game-container" class="container hidden">
+    <header>
+      <h2>Who is the player in the picture?</h1>
+    </header>
+    <div id="image-container">
+      <img id="random-image" src="" alt="Random player image">
+    </div>
+    <div choice-container>
+      <div>
+        <label for="firstChoice">A</label>
+        <input type="radio" name="choice" id="firstChoice">
+        <span id="aLabel"></span>
+      </div>
+      <div>
+        <label for="secondChoice">B</label>
+        <input type="radio" name="choice" id="secondChoice">
+        <span id="bLabel"></span>
+      </div>
+      <div>
+        <label for="thirdChoice">C</label>
+        <input type="radio" name="choice" id="thirdChoice">
+        <span id="cLabel"></span>
+      </div>
+      <div>
+        <label for="fourthChoice">D</label>
+        <input type="radio" name="choice" id="fourthChoice">
+        <span id="dLabel"></span>
+      </div>
+      <div>
+        <label for="fifthChoice">E</label>
+        <input type="radio" name="choice" id="fifthChoice">
+        <span id="eLabel"></span>
+      </div>
+    </div>
+    <button id="submit-button">Submit Answer</button>
+    <p id="message"></p>
+    <p id="count"></p>
+    <button id="next-btn">Next</button>
+  </div>
   
   <script src="assets/js/script.js"></script>
 </body>
