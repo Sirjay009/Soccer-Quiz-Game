@@ -27,7 +27,7 @@ body {
     padding: 2rem;
 }
 
-#startBtn {
+#start-button {
     cursor: pointer;
     padding: 0 0.4rem;
     align-self:center;
@@ -70,8 +70,9 @@ body {
 
 #random-player {
     width: 250px;
-    height: 250px;
-    border-radius: 10px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .choice-container {

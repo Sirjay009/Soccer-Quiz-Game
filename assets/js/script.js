@@ -123,13 +123,14 @@ const players = [{
 
 //Declare constants for DOM elements and possible choices
 const welcomePage = document.getElementsByClassName("welcome-page");
-const button = document.getElementById("startBtn");
+const StartButton = document.getElementById("start-button");
 const quizContainer = document.getElementsByClassName("quiz-container");
 const quizBody = document.getElementsByClassName("quiz-body");
 const imgContainer = document.getElementsByClassName("image-container");
 const playerImage = document.getElementById("random-player");
-const myRadioButtons = document.getElementsByClassName("answer");
-const quizDetails = document.querySelector(".quiz-details");
+const choiceText = document.getElementsByClassName("choice-text");
+const quizFooter = document.getElementsByClassName("quiz-footer");
+const nextButton = document.getElementById("btn");
 
 const aText = document.getElementById("a-text");
 const bText = document.getElementById("b-text");
