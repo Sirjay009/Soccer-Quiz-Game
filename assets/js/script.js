@@ -1,3 +1,26 @@
+//Declare constants for DOM elements and possible choices
+const welcomePage = document.getElementById("welcome-page");
+const StartButton = document.getElementById("start-button");
+const gameContainer = document.getElementById("game-container");
+const randomImage = document.getElementById("random-image");
+const choiceContainer = document.getElementById("choice-container");
+const message = document.getElementById("message");
+const countSection = document.getElementById("count");
+const nextButton = document.getElementById("next-btn");
+
+const labels = {
+A : document.getElementById("label-a"),
+B : document.getElementById("label-b"),
+C : document.getElementById("label-c"),
+D : document.getElementById("label-d"),
+E : document.getElementById("label-e")
+};
+
+
+let counter = 0;
+const gameCount = 5;
+let correctAnswer = "";
+
 //Define player data array
 const players = [{
   name: "Alisson Becker",
@@ -121,29 +144,6 @@ const players = [{
 }
 ];
 
-//Declare constants for DOM elements and possible choices
-const welcomePage = document.getElementById("welcome-page");
-const StartButton = document.getElementById("start-button");
-const gameContainer = document.getElementById("game-container");
-const randomImage = document.getElementById("random-image");
-const choiceContainer = document.getElementById("choice-container");
-const message = document.getElementById("message");
-const countSection = document.getElementById("count");
-const nextButton = document.getElementById("next-btn");
-
-const labels = {
-A : document.getElementById("label-a"),
-B : document.getElementById("label-b"),
-C : document.getElementById("label-c"),
-D : document.getElementById("label-d"),
-E : document.getElementById("label-e")
-}
-
-
-let counter = 0;
-const gameCount = 5;
-let correctAnswer = "";
-
 function myFunction() {
   document.getElementById("welcome-page").style.display = "none";
 }
@@ -169,6 +169,7 @@ function runGame() {
       choices[Math.floor(Math.random() * choices.length)] = correctAnswer;
     }
 
+    console.log("Correct Answer:", correctAnswer);
     console.log("Choices:", choices);
     
     //Let's assign options to labels
@@ -182,6 +183,9 @@ function runGame() {
     Object.keys(labels).forEach(key => {
       labels[key].parentElement.addEventListener("click", submitAnswer);
     });
+
+    nextButton.classList.add("hidden");
+    message.textContent = "";
     
   } else {
     endGame();
@@ -193,8 +197,10 @@ function submitAnswer(event) {
 
   if(selectedChoice === correctAnswer) {
     message.textContent = "Hey! You got it right! :D";
+    message.className = "correct";
     } else {
       message.textContent = `Wrong!. The correct answer was ${correctAnswer}.`;
+      message.className ="wrong";
     }
 
     //Let's prevent further selections by removing event listeners
@@ -207,7 +213,6 @@ function submitAnswer(event) {
   }
 
 function nextQuestion() {
-  message.textContent = "";
   runGame();
 }
 

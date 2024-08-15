@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    color: #333;
+    color: black;
     overflow: hidden;
 }
 
@@ -48,11 +48,22 @@ body {
     width: auto;
 }
 
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+    font-weight: bold;
+}
+
 .hidden {
     display: none;
 }
 
 #game-container {
+    margin-top: 12px;
     border-radius: 15px;
     box-shadow: 0 10px 2px rgba(100, 100, 100, 0.1);
     max-width: 400px;
@@ -62,24 +73,24 @@ body {
 }
 
 header h2 {
-    padding: 1rem 0;
-    font-weight: 500;
+    text-align: center;
+    padding: 30px;
+    font-weight: 700;
 }
 
 #random-image {
     border: 1px solid #ddd;
-    padding: 5px;
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin: auto;
     margin-bottom: 8px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #choice-container {
-    margin-bottom: 0.5rem;
+    padding: 20px;
     width: 100%;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
 }
 
 #choice-container:hover {
@@ -94,8 +105,7 @@ button {
     text-align: center;
     border: 0.1rem solid #56a5eb;
     margin-bottom: 1rem;
-    color: #56a5eb;
-    background-color: white;
+    background-color: orange;
 }
 
 button:hover {
