@@ -1,3 +1,27 @@
+//Declare constants for DOM elements and possible choices
+const welcomePage = document.getElementById("welcome-page");
+const StartButton = document.getElementById("start-button");
+const gameContainer = document.getElementById("game-container");
+const randomImage = document.getElementById("random-image");
+const choiceContainer = document.getElementById("choice-container");
+const message = document.getElementById("message");
+const countSection = document.getElementById("count");
+const nextButton = document.getElementById("next-btn");
+
+const labels = {
+A : document.getElementById("label-a"),
+B : document.getElementById("label-b"),
+C : document.getElementById("label-c"),
+D : document.getElementById("label-d"),
+E : document.getElementById("label-e")
+};
+
+let counter = 0;
+const gameCount = 5;
+let correctAnswer = "";
+//Let's use this variable to track the correct answer
+let correctCount = 0;
+
 //Define player data array
 const players = [{
   name: "Alisson Becker",
@@ -121,88 +145,90 @@ const players = [{
 }
 ];
 
-//Define DOM elements
-const homePage = document.getElementById("home-page");
-const startButton = document.getElementById("start-btn");
-const gameContainer = document.getElementById("game-container");
-const gameArea = document.getElementById("game-area");
-const randomImage = document.getElementById("random-image");
-const choiceContainer = document.getElementById("choice-container");
-const messages = document.getElementById("messages");
-const nextButton = document.getElementById("next-btn");
-const scoreDetails = document.getElementById("score-details");
-const finalScore = document.getElementById("final-score");
-const restartButton = document.getElementById("restart-btn");
-
-//Add event listeners
-startButton.addEventListener("click", runGame);
-nextButton.addEventListener("click", nextPage);
-restartButton.addEventListener("click", restartGame);
-
-function runGame() {
-  homePage.style.display = "none";
-  gameContainer.style.display = "block";
-  loadGame();
+function myFunction() {
+  document.getElementById("welcome-page").style.display = "none";
 }
 
-function loadGame() {
-  if (currentQuestion < players.length) {
-    const currentPlayer = players[currentQuestion];
-    randomImage.src = currentPlayer.img;
-    generateChoices(currentPlayer.name);
-    messages.classList.add("hidden");
+function startGame() {
+  gameContainer.classList.remove("hidden");
+  correctCount = 0;
+  runGame();
+}
+
+function runGame() {
+  if(counter < gameCount) {
+    counter++;
+    countSection.textContent = `Count ${counter} of ${gameCount}`;
+
+    const player = players[Math.floor(Math.random() * players.length)];
+    correctAnswer = player.name;
+    randomImage.src = player.img;
+
+    //Let's ensure the player's name is in the options
+    let choices = shuffleArray([...players.map(p => p.name)]);
+    if(!choices.includes(correctAnswer)) {
+      choices[Math.floor(Math.random() * choices.length)] = correctAnswer;
+    }
+    
+    //Let's assign options to labels
+    labels.A.textContent = choices[0];
+    labels.B.textContent = choices[1];
+    labels.C.textContent = choices[2];
+    labels.D.textContent = choices[3];
+    labels.E.textContent = choices[4];
+
+    const radioButtons = document.querySelectorAll('input[name = "option"]');
+    radioButtons.forEach(button => button.checked = false);
+
+    //This code adds click event listener to each option
+    Object.keys(labels).forEach(key => {
+      labels[key].parentElement.addEventListener("click", submitAnswer);
+    });
+
     nextButton.classList.add("hidden");
+    message.textContent = "";
+    
   } else {
     endGame();
   }
 }
 
-//Let's generate choices to choose from
-function generateChoices(correctName) {
-  choicesList.innerHTML = "";
-  const choices = shuffle([...players.map(p => p.name)]);
-  if(!choices.includes(correctName)) {
-    choices[Math.floor(Math.random() * choices.length)] = correctName;
+function submitAnswer(event) {
+  const selectedChoice = event.target.textContent || event.target.nextElementSibling.textContent;
+
+  if(selectedChoice === correctAnswer) {
+    message.textContent = "Hey! You got it right! :D";
+    message.className = "correct";
+    correctCount++;
+    } else {
+      message.textContent = `Wrong!. The correct answer was ${correctAnswer}.`;
+      message.className ="wrong";
+    }
+
+    //Let's prevent further selections by removing event listeners
+    Object.keys(labels).forEach(key => {
+      labels[key].parentElement.removeEventListener("click", submitAnswer);
+    });
+
+    //Let's display the next button to allow users move to the next question
+    nextButton.classList.remove("hidden");
   }
-  choices.forEach((choice, index) => {
-    const li = document.createElement("li");
-    li.innerText = `${String.fromCharCode(65 + index)}. ${choice}`;
-    li.addEventListener("click", () => checkAnswer(choice, correctName));
-    choiceContainer.appendChild(li);
-  });
 
-}
-
-function checkAnswer(selectedName, correctName) {
-  messages.classList.remove("hidden");
-  if (selectedName === correctName) {
-    choices.innerText = "Correct! Well done!!!";
-    choices.className = "correct";
-    score++;
-
-  } else {
-    messages.innerText ="Awww... You'r wrong!";
-    messages.className = "wrong";
-  }
-  nextButton.classList.remove("hidden");
-}
-
-function nextPage() {
-  currentQuestion++;
-  loadGame();
+function nextQuestion() {
+  runGame();
 }
 
 function endGame() {
-  gameContainer.style.display = "none";
-  scoreDetails.style.display = "block";
-  finalScore.innerText = `${score} out of 5`;
+  message.textContent = `Game over! You have completed ${counter} plays.`;
+  nextButton.textContent = "Restart Game";
+  nextButton.classList.remove("hidden");
+  nextButton.addEventListener("click", restartGame);
 }
 
 function restartGame() {
-  score = 0;
-  currentQuestion = 0;
-  scoreDetails.style.display = "block";
-  loadGame();
+  counter = 0;
+  nextButton.textContent = "Next";
+  startGame();
 }
 
 function shuffleArray(array) {
@@ -212,6 +238,10 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+StartButton.addEventListener("click", startGame);
+nextButton.addEventListener("click", nextQuestion);
+
 
 
 

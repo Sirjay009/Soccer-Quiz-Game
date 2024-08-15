@@ -2,40 +2,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    background-color: white;
-    font-family: "Raleway", sans-serif;
-    color: #445361;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: black;
+    overflow: hidden;
 }
 
-#heading {
-    text-align: center;
-    font-size: 2.5rem;
+#welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    padding: 25px;
+    width: 50%;
+    border-radius: 15px;
 }
 
-#home-page p {
-    font-size: 1.2rem;
+#welcome-page h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+#welcome-page p {
+    font-size: 1.6rem;
     font-weight: 500;
+    color: black;
 }
 
-#start-btn {
-    padding: 10px;
-    font-weight: 500;
-    background-color: orange;
-    border-radius: 4px;
+#start-button {
+    cursor: pointer;
+    padding: 1rem;
+    color: black;
+    margin-top: 2rem;
+    border-radius: 5px;
+    width: auto;
 }
 
-/*Game area*/
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
 #game-container {
-    background-color: #e6ecf0;
-    box-sizing: border-box;
-    width: 85%;
-    height: 80vh;
-    max-height: 550px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
+    margin-top: 12px;
+    border-radius: 15px;
+    box-shadow: 0 10px 2px rgba(100, 100, 100, 0.1);
+    max-width: 400px;
+    width: 100%;
+    height: 80%;
+    background-color: lightblue;
+}
+
+header h2 {
+    text-align: center;
+    padding: 30px;
+    font-weight: 700;
 }
 
 #random-image {
@@ -43,44 +76,52 @@ body {
     width: 100%;
     height: 250px;
     margin: auto;
-    margin-bottom: 10px;
-    border-radius: 10px
+    margin-bottom: 8px;
+    border-radius: 10px;
 }
 
 #choice-container {
-    list-style-type: none;
-    padding: 0;
+    padding: 20px;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
-#choice-container li {
-    margin: 10px 0; 
-    cursor: pointer; 
-    padding: 10px; 
-    border: 0.1rem solid rgb(86, 165, 235, 0.25); 
-    background-color: #fff; 
-    border-radius: 5px; 
-    width: 100%; 
-    margin: 0 auto;
+#choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
 
-.hidden {
-    display: none;
+button {
+    font-size: 1.4rem;
+    text-align: center;
+    border: 0.1rem solid #56a5eb;
+    margin-bottom: 1rem;
+    background-color: orange;
 }
 
-#messages {
-    margin-top: 25px;
-    font-size: 15px;
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 o.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
 
-.correct {
-    color: green;
+button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
-.wrong {
-    color: red;
+#message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    display: block;
 }
 
-#score.details {
-    margin-top: 20px;
+#next-btn {
+    font-weight: bold;
 }
+
 
