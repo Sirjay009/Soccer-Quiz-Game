@@ -121,13 +121,106 @@ const players = [{
 }
 ];
 
-/Declare constants for DOM elements and possible choices
-const welcomePage = document.getElementById("welcome-page");
-const StartButton = document.getElementById("start-button");
+//Define DOM elements
+const homePage = document.getElementById("home-page");
+const startButton = document.getElementById("start-btn");
 const gameContainer = document.getElementById("game-container");
+const gameArea = document.getElementById("game-area");
 const randomImage = document.getElementById("random-image");
 const choiceContainer = document.getElementById("choice-container");
-const message = document.getElementById("message");
-const countSection = document.getElementById("count");
+const messages = document.getElementById("messages");
 const nextButton = document.getElementById("next-btn");
+const scoreDetails = document.getElementById("score-details");
+const finalScore = document.getElementById("final-score");
+const restartButton = document.getElementById("restart-btn");
+
+//Add event listeners
+startButton.addEventListener("click", runGame);
+nextButton.addEventListener("click", nextPage);
+restartButton.addEventListener("click", restartGame);
+
+function runGame() {
+  homePage.style.display = "none";
+  gameContainer.style.display = "block";
+  loadGame();
+}
+
+function loadGame() {
+  if (currentQuestion < players.length) {
+    const currentPlayer = players[currentQuestion];
+    randomImage.src = currentPlayer.img;
+    generateChoices(currentPlayer.name);
+    messages.classList.add("hidden");
+    nextButton.classList.add("hidden");
+  } else {
+    endGame();
+  }
+}
+
+//Let's generate choices to choose from
+function generateChoices(correctName) {
+  choicesList.innerHTML = "";
+  const choices = shuffle([...players.map(p => p.name)]);
+  if(!choices.includes(correctName)) {
+    choices[Math.floor(Math.random() * choices.length)] = correctName;
+  }
+  choices.forEach((choice, index) => {
+    const li = document.createElement("li");
+    li.innerText = `${String.fromCharCode(65 + index)}. ${choice}`;
+    li.addEventListener("click", () => checkAnswer(choice, correctName));
+    choiceContainer.appendChild(li);
+  });
+
+}
+
+function checkAnswer(selectedName, correctName) {
+  messages.classList.remove("hidden");
+  if (selectedName === correctName) {
+    choices.innerText = "Correct! Well done!!!";
+    choices.className = "correct";
+    score++;
+
+  } else {
+    messages.innerText ="Awww... You'r wrong!";
+    messages.className = "wrong";
+  }
+  nextButton.classList.remove("hidden");
+}
+
+function nextPage() {
+  currentQuestion++;
+  loadGame();
+}
+
+function endGame() {
+  gameContainer.style.display = "none";
+  scoreDetails.style.display = "block";
+  finalScore.innerText = `${score} out of 5`;
+}
+
+function restartGame() {
+  score = 0;
+  currentQuestion = 0;
+  scoreDetails.style.display = "block";
+  loadGame();
+}
+
+function shuffleArray(array) {
+  for(let i = array.length - 1; i > 0; i--) {
+    const k = Math.floor(Math.random() * (i + 1));
+    [array[i], array[k]] = [array[k], array[i]];
+  }
+  return array;
+}
+
+
+
+
+
+
+
+
+
+
+
 
