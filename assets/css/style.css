@@ -6,6 +6,7 @@ html {
     min-height: 100%;
     position: relative;
     background-color: #ecf5ff;
+    font-size: 62.5%;
 }
 
 /*General styling*/
@@ -16,4 +17,10 @@ body {
     text-align: center;
 }
 
+/*Header*/
+header {
+    text-align: center;
+    font-size: 2rem;
+    padding: 15px;
+}
 
