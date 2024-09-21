@@ -18,40 +18,43 @@
 <body>
 
   <div id="game-container">
-    <h2>Who is the player in the picture?</h1>
-      <div id="image-container">
-        <img id="random-image" src="" alt="Random player image">
+    <header>
+      <h2>Who is the player in the picture?</h1>
+    </header>
+
+    <div id="image-container">
+      <img id="random-image" src="" alt="Random player image">
+    </div>
+    
+      <div class="choice-container">
+        <p class="choice-prefix">A</p>
+        <p class="choice-text" data-choice="1">Choice1</p>
       </div>
-      <div id="choice-container">
-        <div>
-          <p class="choice-prefix">A</p>
-          <p class="choice-text" data-choice="1">Choice1</p>
-        </div>
-        <div>
-          <p class="choice-prefix">B</p>
-          <p class="choice-text" data-choice="2">Choice2</p>
-        </div>
-        <div>
-          <p class="choice-prefix">C</p>
-          <p class="choice-text" data-choice="3">Choice3</p>
-        </div>
-        <div>
-          <p class="choice-prefix">D</p>
-          <p class="choice-text" data-choice="4">Choice4</p>
-        </div>
-        <div>
-          <p class="choice-prefix">E</p>
-          <p class="choice-text" data-choice="5">Choice5</p>
-        </div>
+      <div class="choice-container">
+        <p class="choice-prefix">B</p>
+        <p class="choice-text" data-choice="2">Choice2</p>
       </div>
-      <div id="message"></div>
-      <div class="score-area">
-        <p class="scores">Correct Answers:<span id="score">0</span></p>
-        <p class="scores">Incorrect Answers:<span id="incorrect">0</span></p>
+      <div class="choice-container">
+        <p class="choice-prefix">C</p>
+        <p class="choice-text" data-choice="3">Choice3</p>
       </div>
-      <div>
-        <button id="next-btn">Next</button>
+      <div class="choice-container">
+        <p class="choice-prefix">D</p>
+        <p class="choice-text" data-choice="4">Choice4</p>
       </div>
+      <div class="choice-container">
+        <p class="choice-prefix">E</p>
+        <p class="choice-text" data-choice="5">Choice5</p>
+      </div>
+
+    <div id="message"></div>
+    <div class="score-area">
+      <p class="scores">Correct Answers:<span id="score">0</span></p>
+      <p class="scores">Incorrect Answers:<span id="incorrect">0</span></p>
+    </div>
+    <div>
+      <button id="next-btn">Next</button>
+    </div>
   </div>
   <script src="assets/js/script.js"></script>
 </body>
