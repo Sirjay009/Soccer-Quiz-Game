@@ -2,51 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Meta tags for search engines-->
-    <meta name="description" content="Soccer Quiz Game">
-    <meta name="keywords" content="Soccer, Quiz, Football, Game">
-    <meta name="author" content="Chima Obutte">
-    <title>Soccer Quiz Game</title>
-    <!--Favicon-->
-    <link rel="icon" type="images/x-icon" href="favicon/Favicon-32x32.png">
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Meta tags for search engines-->
+  <meta name="description" content="Soccer Quiz Game">
+  <meta name="keywords" content="Soccer, Quiz, Football, Game">
+  <meta name="author" content="Chima Obutte">
+  <title>Soccer Quiz Game</title>
+  <!--Favicon-->
+  <link rel="icon" type="images/x-icon" href="favicon/Favicon-32x32.png">
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  
+
   <div id="game-container">
     <h2>Who is the player in the picture?</h1>
-    <div id="image-container">
-      <img id="random-image" src="" alt="Random player image">
-    </div>
-    <div id="choice-container">
-      <div>
-        <p class="choice-prefix">A</p>
-        <p class="choice-text" data-choice="1">Choice1</p>
+      <div id="image-container">
+        <img id="random-image" src="" alt="Random player image">
+      </div>
+      <div id="choice-container">
+        <div>
+          <p class="choice-prefix">A</p>
+          <p class="choice-text" data-choice="1">Choice1</p>
+        </div>
+        <div>
+          <p class="choice-prefix">B</p>
+          <p class="choice-text" data-choice="2">Choice2</p>
+        </div>
+        <div>
+          <p class="choice-prefix">C</p>
+          <p class="choice-text" data-choice="3">Choice3</p>
+        </div>
+        <div>
+          <p class="choice-prefix">D</p>
+          <p class="choice-text" data-choice="4">Choice4</p>
+        </div>
+        <div>
+          <p class="choice-prefix">E</p>
+          <p class="choice-text" data-choice="5">Choice5</p>
+        </div>
+      </div>
+      <div id="message"></div>
+      <div class="score-area">
+        <p class="scores">Correct Answers:<span id="score">0</span></p>
+        <p class="scores">Incorrect Answers:<span id="incorrect">0</span></p>
       </div>
       <div>
-        <p class="choice-prefix">B</p>
-        <p class="choice-text" data-choice="2">Choice2</p>
+        <button id="next-btn">Next</button>
       </div>
-      <div>
-        <p class="choice-prefix">C</p>
-        <p class="choice-text" data-choice="3">Choice3</p>
-      </div>
-      <div>
-        <p class="choice-prefix">D</p>
-        <p class="choice-text" data-choice="4">Choice4</p>
-      </div>
-      <div>
-        <p class="choice-prefix">E</p>
-        <p class="choice-text" data-choice="5">Choice5</p>
-      </div>
-      <p id="message"></p>
-    <p id="count"></p>
-    <button id="next-btn">Next</button>
-    </div>
   </div>
   <script src="assets/js/script.js"></script>
 </body>
