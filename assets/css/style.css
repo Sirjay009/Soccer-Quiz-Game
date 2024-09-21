@@ -8,21 +8,21 @@ html {
     background-color: #ecf5ff;
     font-size: 62.5%;
     box-sizing: border-box;
+    color: #333;
 }
 
 /*General styling*/
 body {
     margin: 0;
     padding: 0;
-    color: #333;
     text-align: center;
 }
 
 /*Header*/
 header {
     text-align: center;
-    font-size: 2rem;
-    padding: 15px;
+    font-size: 1.5rem;
+    padding: 10px;
 }
 
 /*Game section*/
@@ -42,11 +42,17 @@ header {
     width: 100%;
 }
 
+#image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .choice {
     display: flex;
     margin-bottom: 0.5rem;
-    width: 100%;
-    font-size: 1.8rem;
+    width: 80%;
+    font-size: 0.8rem;
     border: 0.1rem solid rgb(86, 165, 235, 0.25);
     background-color: white;   
 }
@@ -73,10 +79,8 @@ header {
     display: none;
 }
 
-.score-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.scores {
+    display: inline-block;
+    padding: 15px;
     font-size: 1.8rem;  
 }
