@@ -1,12 +1,36 @@
 const players = [
-    {name: "Alisson Becker", image:"assets/images/AlissonBecker.jpg"},
-    {name: "André Onana", image:"assets/images/AndréOnana.jpg"},
-    {name: "Antoine Griezmann", image:"assets/images/AntoineGriezmann.jpg"},
-    {name: "Antonio Rüdiger", image:"assets/images/AntonioRüdiger.jpg"},
-    {name: "Bernardo Silva", image:"assets/images/BernardoSilva.png"},
-    {name: "Bukayo Saka", image:"assets/images/BukayoSaka.jpg"},
-    {name: "Cristiano Ronaldo", image:"assets/images/CristianoRonaldo.jpg"},
-    {name: "Declan Rice", image:"assets/images/DeclanRice.jpg"},
+    {name: "Alisson Becker", 
+     image:"assets/images/AlissonBecker.jpg",
+     options: ["Filip Jorgensen", "Gabriel Sara", "Ben White", "Alisson Becker", "Fabian Ruiz"]
+    },
+    {name: "André Onana", 
+     image:"assets/images/AndréOnana.jpg",
+     options: ["Axel Disasi", "André Onana", "Jeremie Frimpong", "Tosin Adarabioyo", "Davinson Sánchez"]
+    },
+    {name: "Antoine Griezmann", 
+     image:"assets/images/AntoineGriezmann.jpg",
+     options: ["Andreas Christensen", "Sven Ulreich", "William Saliba", "David Raya", "Antoine Griezmann"]
+    },
+    {name: "Antonio Rüdiger", 
+     image:"assets/images/AntonioRüdiger.jpg",
+     options: ["Antoine Rüdiger", "Antoine Griezmann", "Axel Disasi", "Jeremie Frimpong", "Gabriel"]
+    },
+    {name: "Bernardo Silva",
+     image:"assets/images/BernardoSilva.png",
+     options: ["Bernardo Silva", "Victor Nelsson", "Mikel Merino", "Dani Ceballos", "Niklas Lomb"]
+    },
+    {name: "Bukayo Saka",
+     image:"assets/images/BukayoSaka.jpg",
+     options: ["Ousmane Dembélé", "André Onana", "Bukayo Saka", "Jonathan Tan", "Davinson Sánchez"]
+    },
+    {name: "Cristiano Ronaldo",
+     image:"assets/images/CristianoRonaldo.jpg",
+     options: ["Lionel Messi", "William Saliba", "Cristiano Ronaldo", "Hiroki Ito", "Pablo Torre"]
+    },
+    {name: "Declan Rice", 
+     image:"assets/images/DeclanRice.jpg",
+     options: []
+    },
     {name: "Erling Haaland", image:"assets/images/ErlingHaaland.jpg"},
     {name: "Florian Wirtz", image:"assets/images/FlorianWirtz.jpg"},
     {name: "Harry Kane", image:"assets/images/HarryKane.jpg"},
