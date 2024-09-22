@@ -1,6 +1,6 @@
 const gameContainer = document.getElementsByClassName("game-container");
 const playerImage = document.getElementById("random-image");
-const choiceText = document.getElementsByClassName("choice-text");
+const optionText = document.getElementsByClassName("option-text");
 const messages = document.getElementById("messages");
 const scores = document.getElementsByClassName("scores");
 const nextButton = document.getElementById("next-btn");
@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function(){
             if(this.getAttribute("data-choice") === "submit") {
                 checkAnswer();
             } else {
-                let gameType = this.getAttribute("data-choice");
+                let playgame = this.getAttribute("data-choice");
+                playgame();
             }
         });
     }

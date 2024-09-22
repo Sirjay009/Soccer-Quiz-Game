@@ -48,7 +48,7 @@ header {
     margin-right: auto;
 }
 
-.choice {
+.option {
     display: flex;
     margin-bottom: 0.5rem;
     width: 80%;
@@ -57,20 +57,20 @@ header {
     background-color: white;   
 }
 
-.choice:hover {
+.option:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
-.choice-prefix {
+.option-prefix {
     padding: 1.5rem 2.5rem;
     background-color: #56a5eb;
     color: white;
 }
 
-.choice-text {
+.option-text {
     padding: 1.5rem;
     width: 100%;
 }
