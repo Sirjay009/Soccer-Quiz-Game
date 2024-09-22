@@ -18,10 +18,42 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#welcome-page {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 4rem;
+    border: 0.1rem solid #56a5eb;
+    color: #56a5eb;
+    background-color: white;
+}
+
+#start-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
 /*Header*/
 header {
     text-align: center;
-    font-size: 1.5rem;
     padding: 10px;
 }
 
