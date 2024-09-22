@@ -1,3 +1,11 @@
+const welcomePage = document.getElementById("welcome-page");
+const startButton = document.getElementById("start-btn");
+const gameContainer = document.getElementsByClassName("game-container");
+const playerImage = document.getElementById("random-image");
+const optionText = document.getElementsByClassName("option-text");
+const messages = document.getElementById("messages");
+const scores = document.getElementsByClassName("scores");
+const nextButton = document.getElementById("next-btn");
 const players = [
     {name: "Alisson Becker", 
      image: "assets/images/AlissonBecker.jpg",
@@ -121,12 +129,11 @@ const players = [
     }
 ];
 
-const gameContainer = document.getElementsByClassName("game-container");
-const playerImage = document.getElementById("random-image");
-const optionText = document.getElementsByClassName("option-text");
-const messages = document.getElementById("messages");
-const scores = document.getElementsByClassName("scores");
-const nextButton = document.getElementById("next-btn");
+startButton.addEventListener("click", function() {
+    welcomePage.style.display = "none";
+    gameContainer.style.display = "block";
+    runGame();
+});
 
 /**
  * Wait for the DOM to finish loading before running game
