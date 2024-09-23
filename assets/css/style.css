@@ -63,10 +63,10 @@ h2 {
 }
 
 /*Game section*/
-.game-container {
+#game-container {
     width: 100vw;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@ h2 {
     padding: 2.5rem;
 }
 
-.game-container > * {
+#game-container > * {
     width: 100%;
 }
 

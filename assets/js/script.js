@@ -1,7 +1,7 @@
 //Get DOM elements
 const welcomePage = document.getElementById("welcome-page");
 const startButton = document.getElementById("start-btn");
-const gameContainer = document.getElementsByClassName("game-container");
+const gameContainer = document.getElementById("game-container");
 const playerImage = document.getElementById("random-image");
 const messages = document.getElementById("messages");
 const scoreBoard = document.getElementsByClassName("scores");
@@ -136,6 +136,14 @@ const questionData = [
     }
 ];
 
+/** */
+function runGame(){
+    console.log("runGame is running");
+    playerImage.src = questionData[0].image
+    console.log(playerImage.src);
+
+}
+
 //Hide welcome page to display game page
 startButton.addEventListener("click", e => {
     welcomePage.style.display = "none";
@@ -143,10 +151,6 @@ startButton.addEventListener("click", e => {
     runGame();
 });
 
-/** */
-function runGame(){
-
-}
 
 /** */
 function loadQuestion(){
@@ -178,7 +182,6 @@ function endGame(){
 
 }
 
-startButton.addEventListener("click", runGame);
 optionButtons.forEach(button => {
     button.addEventListener("click", handleOptions);
 });
