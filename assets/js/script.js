@@ -2,11 +2,16 @@ const welcomePage = document.getElementById("welcome-page");
 const startButton = document.getElementById("start-btn");
 const gameContainer = document.getElementsByClassName("game-container");
 const playerImage = document.getElementById("random-image");
-const optionText = document.getElementsByClassName("option-text");
 const messages = document.getElementById("messages");
-const scores = document.getElementsByClassName("scores");
+const scoreBoard = document.getElementsByClassName("scores");
 const nextButton = document.getElementById("next-btn");
-const players = [
+const optionButtons = document.querySelectorAll(".option-btn");
+
+let correctScore = 0
+let incorrectScore = 0
+let currentQuestion = 0
+const maxQuestions = 5
+const questionData = [
     {name: "Alisson Becker", 
      image: "assets/images/AlissonBecker.jpg",
      options: ["Filip Jorgensen", "Gabriel Sara", "Ben White", "Alisson Becker", "Fabian Ruiz"]
@@ -129,28 +134,40 @@ const players = [
     }
 ];
 
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", e => {
     welcomePage.style.display = "none";
     gameContainer.style.display = "block";
     runGame();
 });
 
-/**
- * Wait for the DOM to finish loading before running game
- * Get the button elements and add event listener to them
- */
-document.addEventListener("DOMContentLoaded", function(){
-    for(let option of option-text) {
-        option.addEventListener("click", function() {
-            if(this.getAttribute("data-choice") === "submit") {
-                checkAnswer();
-            } else {
-                let runGame = this.getAttribute("data-choice");
-                runGame();
-            }
-        });
-    }
-});
+function runGame(){
+
+}
+
+function loadQuestion(){
+
+}
+
+function handleOptions(){
+
+}
+
+function updateScore(){
+
+}
+
+function incrementScore(){
+
+}
+
+function incrementWrongScore(){
+
+}
+
+function endGame(){
+    
+}
+
 
 
 
