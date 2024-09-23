@@ -138,9 +138,6 @@ const questionData = [
 
 /** */
 function runGame(){
-    console.log("runGame is running");
-    playerImage.src = questionData[0].image
-    console.log(playerImage.src);
 
 }
 
