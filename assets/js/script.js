@@ -1,3 +1,4 @@
+//Get DOM elements
 const welcomePage = document.getElementById("welcome-page");
 const startButton = document.getElementById("start-btn");
 const gameContainer = document.getElementsByClassName("game-container");
@@ -7,6 +8,7 @@ const scoreBoard = document.getElementsByClassName("scores");
 const nextButton = document.getElementById("next-btn");
 const optionButtons = document.querySelectorAll(".option-btn");
 
+//Declare needed variables
 let correctScore = 0
 let incorrectScore = 0
 let currentQuestion = 0
@@ -134,39 +136,53 @@ const questionData = [
     }
 ];
 
+//Hide welcome page to display game page
 startButton.addEventListener("click", e => {
     welcomePage.style.display = "none";
     gameContainer.style.display = "block";
     runGame();
 });
 
+/** */
 function runGame(){
 
 }
 
+/** */
 function loadQuestion(){
 
 }
 
+/** */
 function handleOptions(){
 
 }
 
+/** */
 function updateScore(){
 
 }
 
+/** */
 function incrementScore(){
 
 }
 
+/** */
 function incrementWrongScore(){
 
 }
 
+/** */
 function endGame(){
-    
+
 }
+
+startButton.addEventListener("click", runGame);
+optionButtons.forEach(button => {
+    button.addEventListener("click", handleOptions);
+});
+
 
 
 
