@@ -3,9 +3,11 @@ const welcomePage = document.getElementById("welcome-page");
 const startButton = document.getElementById("start-btn");
 const gameContainer = document.getElementById("game-container");
 const playerImage = document.getElementById("random-image");
-const messages = document.getElementById("messages");
+const message = document.getElementById("messages");
 const scoreBoard = document.getElementsByClassName("scores");
+const submitButton = document.getElementById("submit-btn");
 const nextButton = document.getElementById("next-btn");
+const restartButton = document.getElementById("restart-btn");
 const optionButtons = {
     A: document.getElementById("optionA"),
     B: document.getElementById("optionB"),
@@ -173,19 +175,13 @@ const questionData = [
     }
 ];
 
-
-/** */
-function runGame(){
-    startButton.addEventListener("click", e => {
-        welcomePage.classList.add("hidden");
-        gameContainer.classList.hide("hidden");
-        loadQuestion();
-    });
-    
+function runGame() {
+    welcomePage.classList.add("hidden");
+    gameContainer.classList.hide("hidden");
+    loadQuestion();
 }
 
-/** */
-function loadQuestion(){
+function loadQuestion() {
     if(play < maxPlay) {
         play++;
 
@@ -204,29 +200,64 @@ function loadQuestion(){
     }
 }
 
-/** */
-function  generateOptions(){
-
+function  checkAnswer() {
+    const selectedChoice = document.querySelector("input[answer='option']:checked");
+    if(selectedChoice) {
+        const selectedBtn = selectedChoice.nextElementSibling.textContent;
+        if(selectedBtn === correctAnswer) {
+            message.textContent = "Hey! You got it right! :D";
+            incrementScore();
+        } else {
+            message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
+        }
+        submitButton.disabled = true;
+        nextButton.classList.remove("hidden");
+    } else {
+        message.textContent = "Please select an answer!";
+    }
 }
 
-/** */
-function incrementScore(){
-
+function nextQuestion() {
+    message.textContent = "";
+    submitButton.disabled = false;
+    nextButton.classList.add("hidden");
+    loadQuestion();
 }
 
-/** */
-function incrementWrongScore(){
-
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore
 }
 
-/** */
-function endGame(){
-
+function incrementWrongScore() {
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore
 }
 
-optionButtons.forEach(button => {
-    button.addEventListener("click", handleOptions);
-});
+function endGame() {
+    message.textContent = "Game over!";
+    nextButton.textContent = "Restart game";
+    nextButton.classList.remove("hidden");
+    nextButton.addEventListener("click", restartGame);
+}
+
+function restartGame() {
+    play = 0;
+    nextButton.textContent = "Next";
+    runGame();
+}
+
+function shuffleArray(array) {
+    for(let i = array.length -1; i > 0; i--) {
+        const k = Math.floor(Math.random()* (i + 1));
+        [array[i], array[k]] = [array[k], array[i]];
+    }
+    return array
+}
+
+startButton.addEventListener("click", runGame);
+submitButton.addEventListener("click", checkAnswer);
+nextButtonButton.addEventListener("click", runGame);
 
 
 
