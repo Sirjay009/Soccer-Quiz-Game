@@ -23,47 +23,28 @@
     <p>Please click the start button to begin when you are ready</p>
     <button id="start-btn">Start</button>
   </div>
-  
+
 
   <!--Game section-->
   <div id="game-container" class="container">
-    <header>
-      <h2>Who's this?</h1>
-    </header>
+    <h2>Who's this?</h2>
+      <img id="random-image" src="" alt="Random player image" width="350" height="300">
 
-    <img id="random-image" src="" alt="Random player image" width="350" height="350">
+      <div id="option-container">
+        <button class="option-btn" id="optionA"></button>
+        <button class="option-btn" id="optionB"></button>
+        <button class="option-btn" id="optionC"></button>
+        <button class="option-btn" id="optionD"></button>
+        <button class="option-btn" id="optionE"></button>
+      </div>
 
-    <div class="option-container">
-      <div class="option">
-        <p class="option-prefix">A</p>
-        <p class="option-btn" id="optionA" data-choice="1"></p>
+      <!--Message section-->
+      <div id="messages"></div>
+      <div id="score-area">
+        <p class="scores">Correct Answers:<span id="score">0</span></p>
+        <p class="scores">Incorrect Answers:<span id="incorrect">0</span></p>
       </div>
-      <div class="option">
-        <p class="option-prefix">B</p>
-        <p class="option-btn" id="optionB" data-choice="2"></p>
-      </div>
-      <div class="option">
-        <p class="option-prefix">C</p>
-        <p class="option-btn" id="optionC" data-choice="3"></p>
-      </div>
-      <div class="option">
-        <p class="option-prefix">D</p>
-        <p class="option-btn" id="optionD" data-choice="4"></p>
-      </div>
-      <div class="option">
-        <p class="option-prefix">E</p>
-        <p class="option-btn" id="optionE" data-choice="5"></p>
-      </div>
-    </div>
-    <!--Message section-->
-    <div id="messages"></div>
-    <div class="score-area">
-      <p class="scores">Correct Answers:<span id="score">0</span></p>
-      <p class="scores">Incorrect Answers:<span id="incorrect">0</span></p>
-    </div>
-    <div id="buttons">
       <button id="restart-btn">Restart</button>
-    </div>
   </div>
   <script src="assets/js/script.js"></script>
 </body>

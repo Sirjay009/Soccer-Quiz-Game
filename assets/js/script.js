@@ -5,9 +5,8 @@ const gameContainer = document.getElementById("game-container");
 const playerImage = document.getElementById("random-image");
 const message = document.getElementById("messages");
 const scoreBoard = document.getElementsByClassName("scores");
-const submitButton = document.getElementById("submit-btn");
-const nextButton = document.getElementById("next-btn");
 const restartButton = document.getElementById("restart-btn");
+const options = document.getElementsByClassName("option");
 const optionButtons = {
     A: document.getElementById("optionA"),
     B: document.getElementById("optionB"),
@@ -176,7 +175,6 @@ const questionData = [
 ];
 
 function loadQuestion() {
-    console.log(loadQuestion);
     if(play < maxPlay) {
         play++;
 
@@ -200,6 +198,12 @@ startButton.addEventListener("click", e => {
     gameContainer.style.display = "block";
     loadQuestion()
 });
+
+function handleOptions() {
+    option.forEach(button => {
+        button.addEventListener("onclick", nextQuestion);
+    })
+}
 
 function  checkAnswer() {
     const selectedChoice = document.querySelector("input[answer='option']:checked");
@@ -257,8 +261,9 @@ function shuffleArray(array) {
     return array
 }
 
-submitButton.addEventListener("click", checkAnswer);
-nextButton.addEventListener("click", loadQuestion);
+
+
+
 
 
 
