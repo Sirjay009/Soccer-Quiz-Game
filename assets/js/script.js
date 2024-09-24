@@ -176,6 +176,7 @@ const questionData = [
 ];
 
 function loadQuestion() {
+    console.log(loadQuestion);
     if(play < maxPlay) {
         play++;
 
@@ -183,7 +184,7 @@ function loadQuestion() {
         correctAnswer = player.answer;
         playerImage.src = player.image;
 
-        const choices = shuffleArray([...questionData.map(p => p.answer)]);
+        const choices = shuffleArray(player.options);
         optionButtons.A.textContent = choices[0];
         optionButtons.B.textContent = choices[1];
         optionButtons.C.textContent = choices[2];
@@ -207,11 +208,12 @@ function  checkAnswer() {
         if(selectedBtn === correctAnswer) {
             message.textContent = "Hey! You got it right! :D";
             incrementScore();
+            nextQuestion();
         } else {
             message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
+            incrementWrongScore();
+            nextQuestion();
         }
-        submitButton.disabled = true;
-        nextButton.classList.remove("hidden");
     } else {
         message.textContent = "Please select an answer!";
     }
