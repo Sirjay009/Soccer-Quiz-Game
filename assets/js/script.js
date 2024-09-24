@@ -175,12 +175,6 @@ const questionData = [
     }
 ];
 
-function runGame() {
-    welcomePage.classList.add("hidden");
-    gameContainer.classList.hide("hidden");
-    loadQuestion();
-}
-
 function loadQuestion() {
     if(play < maxPlay) {
         play++;
@@ -199,6 +193,12 @@ function loadQuestion() {
         endGame();
     }
 }
+
+startButton.addEventListener("click", e => {
+    welcomePage.style.display = "none";
+    gameContainer.style.display = "block";
+    loadQuestion()
+});
 
 function  checkAnswer() {
     const selectedChoice = document.querySelector("input[answer='option']:checked");
@@ -244,7 +244,7 @@ function endGame() {
 function restartGame() {
     play = 0;
     nextButton.textContent = "Next";
-    runGame();
+    loadQuestion();
 }
 
 function shuffleArray(array) {
@@ -255,9 +255,8 @@ function shuffleArray(array) {
     return array
 }
 
-startButton.addEventListener("click", runGame);
 submitButton.addEventListener("click", checkAnswer);
-nextButtonButton.addEventListener("click", runGame);
+nextButton.addEventListener("click", loadQuestion);
 
 
 
