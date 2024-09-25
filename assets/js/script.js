@@ -18,11 +18,11 @@ const optionButtons = {
 };
 
 //Declare needed variables
+let currentQuestion = 0
 let correctScore = 0
 let incorrectScore = 0
 let play = 0
-let correctAnswer = ""
-const maxPlay = 5
+let maxPlay = 5
 const questionData = [
     {
         image: "assets/images/AlissonBecker.jpg",
@@ -176,6 +176,18 @@ const questionData = [
     }
 ];
 
+function runGame() {
+    currentQuestion = 0;
+    correctScore = 0;
+    incorrectScore = 0;
+    score.textContent = correctScore;
+    incorrect.textContent = incorrectScore;
+    restartButton.style.display = "none";
+    message.textContent = "";
+    loadQuestion();
+
+}
+
 function loadQuestion() {
     if(play < maxPlay) {
         play++;
@@ -201,35 +213,18 @@ startButton.addEventListener("click", e => {
     loadQuestion()
 });
 
-function handleOptions() {
-    option.forEach(button => {
-        button.addEventListener("onclick", nextQuestion);
-    })
-}
-
-function  checkAnswer() {
-    const selectedChoice = document.querySelector("input[answer='option']:checked");
-    if(selectedChoice) {
-        const selectedBtn = selectedChoice.nextElementSibling.textContent;
-        if(selectedBtn === correctAnswer) {
-            message.textContent = "Hey! You got it right! :D";
-            incrementScore();
-            nextQuestion();
-        } else {
-            message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
-            incrementWrongScore();
-            nextQuestion();
-        }
+function checkAnswer(optionButtons, correctAnswer) {
+    if(optionButtons === correctAnswer) {
+        incrementScore();
+        message.textContent = "Hey! You got it right! :D";
+        message.style.color = "green";
     } else {
-        message.textContent = "Please select an answer!";
+        incrementWrongScore();
+        message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
+        message.style.color = "red";
+        setTimeout(loadQuestion, 1000);
     }
-}
 
-function nextQuestion() {
-    message.textContent = "";
-    submitButton.disabled = false;
-    nextButton.classList.add("hidden");
-    loadQuestion();
 }
 
 function incrementScore() {
@@ -244,15 +239,7 @@ function incrementWrongScore() {
 
 function endGame() {
     message.textContent = "Game over!";
-    nextButton.textContent = "Restart game";
-    nextButton.classList.remove("hidden");
-    nextButton.addEventListener("click", restartGame);
-}
-
-function restartGame() {
-    play = 0;
-    nextButton.textContent = "Next";
-    loadQuestion();
+    restartButton.style.display = "block";
 }
 
 function shuffleArray(array) {
@@ -263,6 +250,8 @@ function shuffleArray(array) {
     return array
 }
 
+//Add event listeners
+restartButton.addEventListener("click", runGame);
 
 
 
