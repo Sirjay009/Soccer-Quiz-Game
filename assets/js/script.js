@@ -25,152 +25,152 @@ let play = 0
 let maxPlay = 5
 let correctAnswer = ""
 const questionData = [{
-        image: "assets/images/AlissonBecker.jpg",
+        image: "assets/images/AlissonBecker.jpg2.jpg",
         options: ["Filip Jorgensen", "Gabriel Sara", "Ben White", "Alisson Becker", "Fabian Ruiz"],
         answer: "Alisson Becker"
     },
     {
-        image: "assets/images/AndréOnana.jpg",
+        image: "assets/images/AndréOnana.jpg2.jpg",
         options: ["Axel Disasi", "André Onana", "Jeremie Frimpong", "Tosin Adarabioyo", "Davinson Sánchez"],
         answer: "André Onana"
     },
     {
-        image: "assets/images/AntoineGriezmann.jpg",
+        image: "assets/images/AntoineGriezmann.jpg2.jpg",
         options: ["Andreas Christensen", "Sven Ulreich", "William Saliba", "David Raya", "Antoine Griezmann"],
         answer: "Antoine Griezmann"
     },
     {
-        image: "assets/images/AntonioRüdiger.jpg",
+        image: "assets/images/AntonioRüdiger.jpg2.jpg",
         options: ["Antoine Rüdiger", "Antoine Griezmann", "Axel Disasi", "Jeremie Frimpong", "Gabriel"],
         answer: "Antonio Rüdiger"
     },
     {
-        image: "assets/images/BernardoSilva.png",
+        image: "assets/images/BernadoSilva.jpg2.jpg",
         options: ["Bernardo Silva", "Victor Nelsson", "Mikel Merino", "Dani Ceballos", "Niklas Lomb"],
         answer: "Bernardo Silva"
     },
     {
-        image: "assets/images/BukayoSaka.jpg",
+        image: "assets/images/BukayoSaka.jpg2.jpg",
         options: ["Ousmane Dembélé", "André Onana", "Bukayo Saka", "Jonathan Tan", "Davinson Sánchez"],
         answer: "Bukayo Saka"
     },
     {
-        image: "assets/images/CristianoRonaldo.jpg",
+        image: "assets/images/CristianoRonaldo.jpg2.jpg",
         options: ["Lionel Messi", "William Saliba", "Cristiano Ronaldo", "Hiroki Ito", "Pablo Torre"],
         answer: "Cristiano Ronaldo"
     },
     {
-        image: "assets/images/DeclanRice.jpg",
+        image: "assets/images/DeclanRice.jpg2.jpg",
         options: ["Mikel Merino", "Dani Ceballos", "Declan Rice", "Filip Jorgensen", "Phil Foden"],
         answer: "Declan Rice"
     },
     {
-        image: "assets/images/ErlingHaaland.jpg",
+        image: "assets/images/ErlingHaaland.jpg2.jpg",
         options: ["Erling Haaland", "Alisson Becker", "Lucas Hernandez", "Victor Nelsson", "Luca Modrić"],
         answer: "Erling Haaland"
     },
     {
-        image: " assets/images/FlorianWirtz.jpg",
+        image: "assets/images/FlorianWirtz.jpg2.jpg",
         options: ["Robert Sánchez", "William Saliba", "Bernado Silva", "Gabriel Jesus", "Florian Wirtz"],
         answer: "Florian Wirtz"
     },
     {
-        image: "assets/images/HarryKane.jpg",
+        image: "assets/images/HarryKane.jpg2.jpg",
         options: ["Hakim Ziyeeh", "Harry Kane", "Mikel Merino", "Thibaut Courtois", "Pablo Torre"],
         answer: "Harry Kane"
     },
     {
-        image: "assets/images/JamalMusiala.jpg",
+        image: "assets/images/JamalMusiala.jpg2.jpg",
         options: ["Jamal Musiala", "Lamine Yamal", "David Raya", "William Saliba", "Niklas Lomb"],
         answer: "Jamal Musiala"
     },
     {
-        image: "assets/images/JudeBellingham.jpg",
+        image: "assets/images/JudeBellingham.jpg2.jpg",
         options: ["Jonathan Tan", "Axel Disasi", "Alejandro Balde", "Jude Bellingham", "Alphonso Davies"],
         answer: "Jude Bellingham"
     },
     {
-        image: "assets/images/KevinDeBruyne.jpg",
+        image: "assets/images/KevinDeBruyne.jpg2.jpg",
         options: ["Vigil van Dijk", "Kevin De Bruyne", "Lee Kang-in", "Alisson Becker", "Sven Ulreich"],
         answer: "Kevin De Bruyne"
     },
     {
-        image: "assets/images/KylianMbappe.jpg",
+        image: "assets/images/KylianMbappe.jpg2.jpg",
         options: ["Sadio Mané", "Ousmane Dembélé", "Kylian Mbappé", "Tosin Adarabioyo", "Jeremie Frimpong"],
         answer: "Kylian Mbappé"
     },
     {
-        image: "assets/images/LamineYamal.jpg",
+        image: "assets/images/LamineYamal.jpg2.jpg",
         options: ["Hakim Ziyeeh", "Rodri", "Jamal Musiala", "Gabriel Sara", "Lamine Yamal"],
         answer: "Lamine Yamal"
     },
     {
-        image: "assets/images/LionelMessi.jpg",
+        image: "assets/images/LionelMessi.jpg2.jpg",
         options: ["Cristiano Ronaldo", "Erling Haaland", "Lionel Messi", "Ben White", "Robert Lewandowski"],
         answer: "Lionel Messi"
     },
     {
-        image: "assets/images/LukaModric.jpg",
+        image: "assets/images/LukaModric.jpg2.jpg",
         options: ["Toni Kroos", "Thomas Partey", "Riccardo Calafiori", "David Raya", "Luka Modrić"],
         answer: "Luka Modrić"
     },
     {
-        image: "assets/images/MartinOdegaard.jpg",
+        image: "assets/images/MartinOdegaard.jpg2.jpg",
         options: ["Martin Ødegaard", "Fabian Ruiz", "Manuel Neuer", "Mikel Merino", "Filip Jorgensen"],
         answer: "Martin Ødegaard"
     },
     {
-        image: "assets/images/MohamedSalah.jpg",
+        image: "assets/images/MohamedSalah.jpg2.jpg",
         options: ["Thibaut Courtois", "Dani Ceballos", "Mohamed Salah", "Declan Rice", "Bernado Silva"],
         answer: "Mohamed Salah"
     },
     {
-        image: "assets/images/PhilFoden.jpg",
+        image: "assets/images/PhilFoden.jpg2.jpg",
         options: ["Filip Jorgesen", "Phil Foden", "David Raya", "Gabriel Sara", "Sven Ulreich"],
         answer: "Phil Foden"
     },
     {
-        image: "assets/images/RobertLewandowski.jpg",
+        image: "assets/images/RobertLewandowski.jpg2.jpg",
         options: ["Andreas Christensen", "Robert Sanchez", "Victor Nelsson", "Alphonso Davies", "Robert Lewandowski"],
         answer: "Robert Lewandowski"
     },
     {
-        image: "assets/images/Rodri.jpg",
+        image: "assets/images/Rodri.jpg2.jpg",
         options: ["Toni Kroos", "Rodri", "Robert Lewandowski", "Ben White", "Itiroki Ito"],
         answer: "Rodri"
     },
     {
-        image: "assets/images/SadioMané.jpg",
+        image: "assets/images/SadioMané.jpg2.jpg",
         options: ["Jonathan Tan", "Dayot Upamecano", "Victor Osimhen", "Sadio Mané", "André Onana"],
         answer: "Sadio Mané"
     },
     {
-        image: "assets/images/SonHeung-min.png",
+        image: "assets/images/SonHeung-min.png2.png",
         options: ["Lee Kang-in", "Itiroki Ito", "Son Heung-min", "Pablo Torre", "Andreas Christensen"],
         answer: "Son Heung-min"
     },
     {
-        image: "assets/images/ToniKroos.jpg",
+        image: "assets/images/ToniKroos.jpg2.jpg",
         options: ["Fabian Ruiz", "Toni Kroos", "Thibaut Courtois", "Antoine Griezmann", "Florian Wirtz"],
         answer: "Toni Kroos"
     },
     {
-        image: "assets/images/VictorOsimhen.jpg",
+        image: "assets/images/VictorOsimhen.jpg2.jpg",
         options: ["André Onana", "Sadio Mané", "Vincent Aboubakar", "Bukayo Saka", "Victor Osimhen"],
         answer: "Victor Osimhen"
     },
     {
-        image: "assets/images/VigilvanDijk.jpg",
+        image: "assets/images/VigilvanDijk.jpg2.jpg",
         options: ["Victor Nelsson", "Kevin De Bruyne", "Vigil van Dijk", "Harry Kane", "Sven Ulreich"],
         answer: "Vigil van Dijk"
     },
     {
-        image: "assets/images/VincentAboubakar.jpg",
+        image: "assets/images/VincentAboubakar.jpg2.jpg",
         options: ["Dayot Upamecano", "Jonathan Tan", "Ousmane Dembélé", "Vincent Aboubakar", "Victor Osimhen"],
         answer: "Vincent Aboubakar"
     },
     {
-        image: "assets/images/ViniciusJr.jpg",
+        image: "assets/images/ViniciusJr.jpg2.jpg",
         options: ["Vinicius Jr", "Jude Bellingham", "Antonio Rüdiger", "Davinson Sanchez", "Axel Disasi"],
         answer: "Vinicius Jr"
     }
