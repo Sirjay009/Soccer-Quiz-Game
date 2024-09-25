@@ -24,8 +24,7 @@ let incorrectScore = 0
 let play = 0
 let maxPlay = 5
 let correctAnswer = ""
-const questionData = [
-    {
+const questionData = [{
         image: "assets/images/AlissonBecker.jpg",
         options: ["Filip Jorgensen", "Gabriel Sara", "Ben White", "Alisson Becker", "Fabian Ruiz"],
         answer: "Alisson Becker"
@@ -35,7 +34,7 @@ const questionData = [
         options: ["Axel Disasi", "André Onana", "Jeremie Frimpong", "Tosin Adarabioyo", "Davinson Sánchez"],
         answer: "André Onana"
     },
-    { 
+    {
         image: "assets/images/AntoineGriezmann.jpg",
         options: ["Andreas Christensen", "Sven Ulreich", "William Saliba", "David Raya", "Antoine Griezmann"],
         answer: "Antoine Griezmann"
@@ -45,7 +44,7 @@ const questionData = [
         options: ["Antoine Rüdiger", "Antoine Griezmann", "Axel Disasi", "Jeremie Frimpong", "Gabriel"],
         answer: "Antonio Rüdiger"
     },
-    { 
+    {
         image: "assets/images/BernardoSilva.png",
         options: ["Bernardo Silva", "Victor Nelsson", "Mikel Merino", "Dani Ceballos", "Niklas Lomb"],
         answer: "Bernardo Silva"
@@ -71,7 +70,7 @@ const questionData = [
         answer: "Erling Haaland"
     },
     {
-        image:" assets/images/FlorianWirtz.jpg",
+        image: " assets/images/FlorianWirtz.jpg",
         options: ["Robert Sánchez", "William Saliba", "Bernado Silva", "Gabriel Jesus", "Florian Wirtz"],
         answer: "Florian Wirtz"
     },
@@ -190,12 +189,16 @@ function runGame() {
 }
 
 function loadQuestion() {
-    if(play < maxPlay) {
-        play++;
+    if (currentQuestion >= maxPlay) {
+        endGame();
+        return;
 
+    } else {
         const player = questionData[Math.floor(Math.random() * questionData.length)];
         correctAnswer = player.answer;
         playerImage.src = player.image;
+        message.textContent = "";
+        restartButton.style.display = "none";
 
         const choices = shuffleArray(player.options);
         optionButtons.A.textContent = choices[0];
@@ -214,18 +217,17 @@ startButton.addEventListener("click", e => {
 
 function checkAnswer() {
     console.log(this, correctAnswer);
-    if(this.innerText === correctAnswer) {
+    if (this.innerText === correctAnswer) {
         message.textContent = "Hey! You got it right! :D";
         message.style.color = "green";
         incrementScore();
-        
+
     } else {
         message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
         message.style.color = "red";
         incrementWrongScore();
     }
     setTimeout(loadQuestion, 3000);
-
 }
 
 function incrementScore() {
@@ -244,8 +246,8 @@ function endGame() {
 }
 
 function shuffleArray(array) {
-    for(let i = array.length -1; i > 0; i--) {
-        const k = Math.floor(Math.random()* (i + 1));
+    for (let i = array.length - 1; i > 0; i--) {
+        const k = Math.floor(Math.random() * (i + 1));
         [array[i], array[k]] = [array[k], array[i]];
     }
     return array
@@ -253,27 +255,6 @@ function shuffleArray(array) {
 
 //Add event listeners
 restartButton.addEventListener("click", runGame);
-for(let button in optionButtons) {
+for (let button in optionButtons) {
     optionButtons[button].addEventListener("click", checkAnswer);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

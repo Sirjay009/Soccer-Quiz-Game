@@ -61,7 +61,7 @@ h1, h2 {
     background-color: #56a5eb;
     background: #fff;
     width: 90%;
-    margin: 100px auto 0;
+    margin: 20px;
     border-radius: 10px;
     padding: 30px;
     display: none;
@@ -71,11 +71,14 @@ h1, h2 {
     border: 2px solid #333;
     margin-bottom: 10px;
     border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .option-btn {
-    background: #fff;
-    color: #222;
+    background: black;
+    color: white;
+    font-size: 20px;
     font-weight: 700;
     width: 60%;
     border: 1px solid #222;
@@ -84,11 +87,6 @@ h1, h2 {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.option-btn:hover {
-    background: #222;
-    color: #fff;
 }
 
 #messages {
