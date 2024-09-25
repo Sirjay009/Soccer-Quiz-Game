@@ -216,12 +216,12 @@ startButton.addEventListener("click", e => {
 function checkAnswer() {
     console.log(this, correctAnswer);
     if (this.innerText === correctAnswer) {
-        message.textContent = "Hey! You got it right! :D";
+        message.textContent = "Correct!";
         message.style.color = "green";
         incrementScore();
 
     } else {
-        message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
+        message.textContent = `Incorrect! The answer was -${correctAnswer}-`;
         message.style.color = "red";
         incrementWrongScore();
     }
