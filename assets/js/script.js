@@ -23,6 +23,7 @@ let correctScore = 0
 let incorrectScore = 0
 let play = 0
 let maxPlay = 5
+let correctAnswer = ""
 const questionData = [
     {
         image: "assets/images/AlissonBecker.jpg",
@@ -202,28 +203,28 @@ function loadQuestion() {
         optionButtons.C.textContent = choices[2];
         optionButtons.D.textContent = choices[3];
         optionButtons.E.textContent = choices[4];
-    } else {
-        endGame();
     }
 }
 
 startButton.addEventListener("click", e => {
     welcomePage.style.display = "none";
     gameContainer.style.display = "block";
-    loadQuestion()
+    runGame();
 });
 
-function checkAnswer(optionButtons, correctAnswer) {
-    if(optionButtons === correctAnswer) {
-        incrementScore();
+function checkAnswer() {
+    console.log(this, correctAnswer);
+    if(this.innerText === correctAnswer) {
         message.textContent = "Hey! You got it right! :D";
         message.style.color = "green";
+        incrementScore();
+        
     } else {
-        incrementWrongScore();
         message.textContent = `Sadly, you got it wrong! The correct answer was ${correctAnswer}.`;
         message.style.color = "red";
-        setTimeout(loadQuestion, 1000);
+        incrementWrongScore();
     }
+    setTimeout(loadQuestion, 3000);
 
 }
 
@@ -252,6 +253,9 @@ function shuffleArray(array) {
 
 //Add event listeners
 restartButton.addEventListener("click", runGame);
+for(let button in optionButtons) {
+    optionButtons[button].addEventListener("click", checkAnswer);
+}
 
 
 
