@@ -1,25 +1,17 @@
 /*Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-* {
-    padding: 0;
-    font-family: "Raleway", sans-serif;
-    box-sizing: border-box;
-}
-
 /*General styling*/
 html, body {
+    height: 100%;
     margin: 0;
-    width: 100%;
-}
-
-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background: lightgreen;
+    font-family: "Raleway", sans-serif;
 }
 
 h1, h2 {
@@ -58,31 +50,48 @@ h1, h2 {
 
 /*Game section*/
 #game-container {
-    background-color: #56a5eb;
     background: #fff;
-    width: 90%;
-    margin: 20px;
+    width: 90vw;
+    max-width: 600px;
+    max-height: 90vh;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
     display: none;
+}
+
+#game-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #random-image {
     border: 2px solid #333;
     margin-bottom: 10px;
     border-radius: 20px;
-    width: 100%;
+    max-width: 50%;
+    height: auto;
     max-width: 400px;
+}
+
+#option-container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 20px;
 }
 
 .option-btn {
     background: black;
     color: white;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 700;
-    width: 60%;
+    width: 70%;
     border: 1px solid #222;
-    padding: 10px;
+    padding: 5px;
     margin: 10px 0;
     border-radius: 4px;
     cursor: pointer;
@@ -97,7 +106,7 @@ h1, h2 {
 }
 
 #score-area {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .scores {
@@ -135,22 +144,4 @@ h1, h2 {
 .hidden {
     display: none;
 }
-
-/*Media query: tablets and larger (768px)*/
-@media screen and (min-width:768px) {
-
-    #game-container {
-        width: 50%;
-        margin: 100px auto 0;
-        border-radius: 10px;
-        padding: 30px;
-        display: none;
-    }
-    
-    #random-image {
-        width: 350;
-    }
-
-}
-
 
