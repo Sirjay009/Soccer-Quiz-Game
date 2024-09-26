@@ -11,6 +11,7 @@
 <h3>Game Developer</h3>
 <ul>
 <li>As the game developer, i want to be able to create a soccer quiz game every football lover can enjoy irrespective of age.</li>
+<li>As the game developer, i want to be able to welcome users to my game app and give them to opportunity to begin when they are ready.</li>
 <li>As the game developer, i want to be able to test football lovers' knowledge of some of their favorite players.</li>
 <li>As the game developer, i want to be able to provide players, answer options to select the right answer from.</li>
 <li>As the game developer, i want to be able to immediately notify players of their correctly and incorrectly picked answers.</li>
@@ -26,7 +27,7 @@
 <p>In achieving the user and app developer goals, i have created a picture/name pairing quiz game that requires players to identify a randomly generated player's image by name from five(5) provided name options while also using the feedback and scoring features to enhance users' experience.</p>
 
 <h3>The Feedback Feature</h3>
-<img src="docs/readme.images/jpeg-optimizer_HomePage.PNG" alt="Screen shot of the 'Home page' of Sirjays Car Rental project">
+<img src="docs/testing.images/Capture.PNG" alt="Screen shot of the 'Home page' of Sirjays Car Rental project">
 <ul>
 <li>The Home page section clearly details the essence and purpose of the company in the header.</li>
 <li>A navigation section to access the pages of the website is nested in the header of the homepage.</li>

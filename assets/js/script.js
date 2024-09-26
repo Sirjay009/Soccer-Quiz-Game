@@ -226,7 +226,7 @@ function checkAnswer() {
         message.style.color = "red";
         incrementWrongScore();
     }
-    setTimeout(loadQuestion, 10000);
+    setTimeout(loadQuestion, 1500);
 }
 
 function incrementScore() {
