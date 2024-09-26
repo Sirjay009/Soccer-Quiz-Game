@@ -1,6 +1,6 @@
 <h1>Soccer⚽ Quiz Game</h1>
 
-<img src="docs/testing.images/Capture.PNG1.PNG" alt="A screen shot of the game page of the soccer game app">
+<img src="docs/testing.images/Capture.PNG1.PNG" alt="A screen shot of the game page of the soccer quiz game">
 
 <br>
 <br>
@@ -204,7 +204,7 @@
 <li><p>Accessibility</p>
 <ul>
 <li>I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighhouse in devtools.</li>
-<img src="docs/readme.images/testing.images/jpeg-optimizer_Lighthouse.PNG" alt="Screen shot of 'lighthouse accessibility diagnosis' of Sirjays Car Rental project">
+<img src="docs/testing.images/Capture.PNG6.PNG" alt="Screen shot of 'lighthouse accessibility diagnosis' of Soccer Quiz Game">
 </ul>
 </li>
 
