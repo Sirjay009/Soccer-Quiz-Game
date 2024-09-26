@@ -18,11 +18,11 @@ const optionButtons = {
 };
 
 //Declare needed variables
-let currentQuestion = 0
-let correctScore = 0
-let incorrectScore = 0
-let play = 0
-let maxPlay = 5
+let currentQuestion = 0;
+let correctScore = 0;
+let incorrectScore = 0;
+let play = 0;
+let maxPlay = 5;
 let correctAnswer = ""
 const questionData = [{
         image: "assets/images/AlissonBecker.jpg2.jpg",
@@ -189,23 +189,24 @@ function runGame() {
 }
 
 function loadQuestion() {
-    if (currentQuestion <= maxPlay) {
-        endGame();
-    }
+    if (currentQuestion >= maxPlay) {
+        endGame;
+        return;
+    } 
+    
+        const player = questionData[Math.floor(Math.random() * questionData.length)];
+        correctAnswer = player.answer;
+        playerImage.src = player.image;
+        message.textContent = "";
+        restartButton.style.display = "none";
 
-    const player = questionData[Math.floor(Math.random() * questionData.length)];
-    correctAnswer = player.answer;
-    playerImage.src = player.image;
-    message.textContent = "";
-    restartButton.style.display = "none";
-
-    const choices = shuffleArray(player.options);
-    optionButtons.A.textContent = choices[0];
-    optionButtons.B.textContent = choices[1];
-    optionButtons.C.textContent = choices[2];
-    optionButtons.D.textContent = choices[3];
-    optionButtons.E.textContent = choices[4];
-}
+        const choices = shuffleArray(player.options);
+        optionButtons.A.textContent = choices[0];
+        optionButtons.B.textContent = choices[1];
+        optionButtons.C.textContent = choices[2];
+        optionButtons.D.textContent = choices[3];
+        optionButtons.E.textContent = choices[4];
+    } 
 
 startButton.addEventListener("click", e => {
     welcomePage.style.display = "none";
@@ -225,7 +226,7 @@ function checkAnswer() {
         message.style.color = "red";
         incrementWrongScore();
     }
-    setTimeout(loadQuestion, 3000);
+    setTimeout(loadQuestion, 1500);
 }
 
 function incrementScore() {
