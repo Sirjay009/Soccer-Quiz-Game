@@ -217,7 +217,7 @@ startButton.addEventListener("click", e => {
 function checkAnswer() {
     console.log(this, correctAnswer);
     if (this.innerText === correctAnswer) {
-        message.textContent = "Correct!";
+        message.textContent = "Congrats! Answer is Correct.";
         message.style.color = "green";
         incrementScore();
 
