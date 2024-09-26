@@ -1,10 +1,12 @@
 <h1>Soccer⚽ Quiz Game</h1>
 
 <img src="docs/testing.images/Capture.PNG1.PNG" alt="A screen shot of the game page of the soccer game app">
+
+<br>
 <br>
 
 <p>The Soccer Quiz Game is an online game app for football lovers irrespective of age. It aims at entertaining and testing soccer lovers' knowledge of the identity of some of the game's most decorated players.</p>
-<br>
+
 
 <h3>User</h3>
 
@@ -100,8 +102,7 @@
 <p>I manually tested this project to determine site usability, responsiveness and intuitivity to new users, by self and with the help of a few friends.</p>
 <br>
 
-<h4>Testing phase</h4>
-<br>
+<h3>Testing phase</h3>
 <h5>Testing the start and option buttons</h5>
 <table>
 <tr>
@@ -117,7 +118,6 @@
     <td>Pass</td>
   </tr>
 </table>
-<br>
 
 <h5>Testing for responsiveness</h5>
 <table>
@@ -136,8 +136,7 @@
 </table>
 <br>
 
-<h4>User testing</h4>
-<br>
+<h3>User testing</h3>
 <h5>User testing challenge</h5>
 <p>5 users were tasked prior to visiting the web page to conduct under-stated basic testing and report on success or otherwise.</p>
 <br>
@@ -147,26 +146,26 @@
     <th>Result</th>
   </tr>
    <tr>
-    <td>Upon arrival to website please navigate to where you would expect to find a contact form</td>
+    <td>Upon arrival to website please click start button to see if it takes you to the game page</td>
     <td>100%</td>
   </tr>
   <tr>
-    <td>Please navigate to the social media links of this business</td>
+    <td>Upon arrival to the game page, please confirm the game loads</td>
     <td>100%</td>
   </tr>
   <tr>
-    <td>Please fill in contact form with your information and car category preference throught the reserve button</td>
+    <td>Please use the option buttons to select an answer and see if you will get a feedback of correct or incorrect answer</td>
     <td>100%</td>
   </tr>
   <tr>
-    <td>Please navigate to the Portfolio page and count how many images there are</td>
+    <td>Please confirm if correct and incorrect answers increments accordingly in real time as you play</td>
     <td>100%</td>
   </tr>
 </table>
 <br>
 
-<h5>User responsive testing</h5>
-<p>5 users were asked to view the website on their mobile devices and/or tablets to provide any feedback on errors or page overlapping issues.</p>
+<h3>User responsive testing</h3>
+<p>5 users were asked to view the app on their mobile devices and/or tablets to provide any feedback on errors or page overlapping issues.</p>
 <br>
 <table>
 <tr>
@@ -183,9 +182,7 @@
 <h3>Bugs</h3>
 <p>Solved bugs</p>
 <ul>
-<li>After deployment, my logo won't stop wrapping on mobile screens of width of 315px and below. I created a new media query for screens of max-width 315px and below to debug the problem</li>
-<li>Navbar items kept wrapping on tablet screens even after i reduced it's font size. I debuged it using the code - whitespace : nowrap; - on the media query of tablets</li>
-<li>Reserve forms could be submitted with no values using the space key. I debuged the issue using the code - pattern="[A-Za-z0-9]{1,20}"</li>
+<li>After deployment, the entire game page kept overflowing out of the game container creating a scroll effect on all screens. I figured out the issue was coming from the entire height of my game-container. I debuged this issue by first resizing and reloading the images. I went ahead to use the flexbox to place the image tag and options container side by side to cut down on the height. Finally, I used the code - ::-webkit.scrollbar- to remove the scroll bars that persisted.</li>
 </ul>
 <br>
 
@@ -228,7 +225,7 @@
 <li>Go to the 'Environments' section on the right-hand side and click on 'github-pages'</li>
 <li>Click on the URL displayed to see the live deployed site</li>
 </ul>
-<p>The live link can be found here - https://sirjay009.github.io/Sirjays-Car-Rentals/index.html</p>
+<p>The live link can be found here - https://sirjay009.github.io/Soccer-Quiz-Game/</p>
 <br>
 <h3>Credits</h3>
 <p>Credit</p>
