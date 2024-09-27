@@ -189,11 +189,6 @@ function runGame() {
 }
 
 function loadQuestion() {
-    if (currentQuestion >= maxPlay) {
-        endGame;
-        return;
-    } 
-    
         const player = questionData[Math.floor(Math.random() * questionData.length)];
         correctAnswer = player.answer;
         playerImage.src = player.image;
@@ -206,7 +201,7 @@ function loadQuestion() {
         optionButtons.C.textContent = choices[2];
         optionButtons.D.textContent = choices[3];
         optionButtons.E.textContent = choices[4];
-    } 
+}
 
 startButton.addEventListener("click", e => {
     welcomePage.style.display = "none";
@@ -215,7 +210,6 @@ startButton.addEventListener("click", e => {
 });
 
 function checkAnswer() {
-    console.log(this, correctAnswer);
     if (this.innerText === correctAnswer) {
         message.textContent = "Congrats! Answer is Correct.";
         message.style.color = "green";
@@ -226,7 +220,12 @@ function checkAnswer() {
         message.style.color = "red";
         incrementWrongScore();
     }
-    setTimeout(loadQuestion, 1500);
+    currentQuestion++;
+    if(currentQuestion >= maxPlay) {
+        endGame();
+    } else {
+        setTimeout(loadQuestion, 1500);
+    }
 }
 
 function incrementScore() {
