@@ -24,7 +24,8 @@ let incorrectScore = 0;
 let play = 0;
 let maxPlay = 5;
 let correctAnswer = ""
-const questionData = [{
+const questionData = [
+    {
         image: "assets/images/AlissonBecker.jpg2.jpg",
         options: ["Filip Jorgensen", "Gabriel Sara", "Ben White", "Alisson Becker", "Fabian Ruiz"],
         answer: "Alisson Becker"
