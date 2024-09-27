@@ -64,6 +64,11 @@
 <ul>
 <li>The idea behind including the scoring tracker feature is to keep track in real time of the number of players' won and lost plays. While the "correct" counter keeps track of number of correct answers scored by players, the "incorrect" counter tracks the number of players' wrong answers.</li>
 </ul>
+
+<h4>The Restart Button</h4>
+<ul>
+<li>A restart button is provided at the end of the game to enable users refresh the game and start a new game.</li>
+</ul>
 <br>
 
 <h3>Technology Used</h3>
@@ -184,6 +189,10 @@
 <ul>
 <li>After deployment, the entire game page kept overflowing out of the game container creating a scroll effect on all screens. I figured out the issue was coming from the entire height of my game-container. I debuged this issue by first resizing and reloading the images. I went ahead to use the flexbox to place the image tag and options container side by side to cut down on the height. Finally, I used the code - ::-webkit.scrollbar- to remove the scroll bars that persisted.</li>
 </ul>
+
+<ul>
+<li>In trying to comply with the mobile first design principle, I noticed the game displayed differently on larger screens. To ensure greater user experience and display game better, I used @media query to resize some elements.</li>
+</ul>
 <br>
 
 <h3>Validator Testing</h3>
@@ -233,7 +242,8 @@
 <li>The favicon link code was taken from https://www.w3schools.com</li>
 <li>The increment scores code was taken from the CI love Maths Project</li>
 <li>The scrollbar debug code was taken from https://www.youtube.com/c/r3habmedia</li>
-<li>Pieces of code for the general styling of the project was also taken from https://www.w3schools.com , https://www.codedamn.com , https://www.keentodesign.com and https://www.youtube.com/c/TheWheelchairGuy</li>
+<li>Pieces of code for the general styling of the project was also taken from https://www.w3schools.com , https://www.codedamn.com and https://www.youtube.com/c/TheWheelchairGuy</li>
+<li>I also utilized a plethora of online resources and tutorials including https://stackoverflow.com/, https://www.youtube.com/@WebDevSimplified, https://www.shecodes.io/, https://www.geeksforgeeks.org/,  to accomplish this project. </li>
 </ul>
 <br>
 
