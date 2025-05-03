@@ -1,168 +1,254 @@
 /*Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-/*General styling*/
-html,
+/* General styles */
 body {
-    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
-    padding: 0;
+    padding: 1rem; /* Add some padding to prevent edge sticking */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: lightblue;
-    font-family: "Raleway", sans-serif;
+    overflow: hidden; /* Prevent scroll bars */
 }
 
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem; /* Reduced padding */
+    width: 95%; /* More flexible width */
+    max-width: 600px; /* Smaller max-width */
+    max-height: 95vh; /* Constrain height */
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding in height calc */
+}
 
+/* Welcome page grid */
 #welcome-page {
     text-align: center;
-    display: block;
+    display: flex; /* Changed from block to flex */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem; /* Increased padding */
+    gap: 1.5rem; /* Increased gap between elements */
+    min-height: 70vh; /* Added minimum height */
+}
+
+#welcome-page h1 {
+    margin-bottom: 0.5rem; /* Add space below heading */
+    font-size: 2.5rem; /* Optional: increase size */
+}
+
+#welcome-page h2 {
+    margin: 0.5rem 0; /* Add space around subheading */
+    font-size: 1.5rem; /* Optional: increase size */
 }
 
 #welcome-page p {
-    font-weight: 500;
-    font-size: 18px;
+    margin: 1rem 0; /* More space around paragraph */
+    font-size: 1.1rem; /* Optional: increase size */
+    max-width: 80%; /* Prevent text from spanning full width */
+    line-height: 1.5; /* Better readability */
 }
 
 #start-btn {
-    font-size: 1.2rem;
-    padding: 0.7rem;
-    width: 8rem;
-    border: 0.1rem solid #56a5eb;
-    color: black;
-    background-color: white;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
+    margin-top: 1rem; /* Extra space above button */
+    padding: 0.8rem 2rem; /* Larger button */
+    font-size: 1.1rem; /* Larger text */
 }
 
-#start-btn:hover {
-    background: whitesmoke;
-    color: black;
-}
-
-/*Game section*/
+/* Game container grid */
 #game-container {
-    background: #fff;
-    width: 90vw;
-    max-width: 500px;
-    max-height: 100vh;
-    border-radius: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: auto;
-    display: none;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto auto;
-    justify-items: center;
-    gap: 10px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem; /* Reduced gap */
 }
 
-#game-data {
+#game-container h2 {
+    grid-column: 1 / -1; /* Make question span both columns */
+    margin-bottom: 0.5rem;
+}
+
+#game-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
     justify-items: center;
 }
 
 #random-image {
-    border: 2px solid #333;
-    margin-bottom: 10px;
-    border-radius: 30px;
+    max-width: 280px; /* Slightly larger */
+    max-height: 320px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #option-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
     width: 100%;
-    padding: 10px;
+    height: 100%;
+    align-content: center;
 }
 
-.option-btn {
-    background: white;
-    color: black;
-    height: 50px;
-    font-size: 0.7em;
-    font-weight: 700;
-    border: 1px solid #222;
-    padding: 2px;
-    margin: 3px 0;
-    border-radius: 4px;
-    cursor: pointer;
+/* Message and score area */
+.message-grid {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced gap */
 }
 
 #messages {
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding: 5px;
-    color: green;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 1.2rem;
 }
 
-#messages p {
-    margin: 0;
+#score-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem; /* Reduced gap */
+    font-size: 0.9rem; /* Smaller font */
 }
 
 .scores {
-    display: inline-block;
-    padding: 2px;
-    font-size: 1rem;
     margin: 0;
+    font-size: inherit;
 }
 
-#score {
-    color: green;
+/* Buttons */
+button {
+    padding: 0.6rem 1rem; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font */
+    margin: 0.25rem 0;
 }
 
-#incorrect {
-    color: red;
+.option-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    min-height: 1.8rem;
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+#score-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.scores {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.scores span {
+    color: #3498db;
+    margin-left: 0.5rem;
+}
+
+/* Buttons */
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
 }
 
 #restart-btn {
-    background: greenyellow;
-    color: black;
-    font-weight: 700;
-    width: 150px;
-    border: 0;
-    padding: 10px;
-    margin: 5px auto 0;;
-    border-radius: 4px;
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+.option-btn {
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-#restart-btn:hover {
-    background: black;
-    color: whitesmoke;
+.option-btn:hover {
+    background-color: #2980b9;
 }
 
-.hidden {
-    display: none;
-}
-
-@media screen and (min-width:1024px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #game-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    #random-image {
+        max-width: 220px;
+        max-height: 240px;
+        margin-bottom: 0.5rem;
+    }
+    
+    #option-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
     .option-btn {
-        font-size: 1.4em;
-        padding: 6px;
+        font-size: 0.8rem;
+        min-height: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome-page h1 {
+        font-size: 1.5rem;
+    }
+    
+    #welcome-page h2 {
+        font-size: 1rem;
+    }
+
+    #random-image {
+        max-width: 200px;
+        max-height: 180px;
     }
 
     #score-area {
-        margin-top: 20px;
+        grid-template-columns: 1fr;
     }
-
-    .scores {
-        display: inline-block;
-        padding: 3px;
-        font-size: 1.2rem;
-        font-weight: 500;
+    
+    button {
+        padding: 0.5rem 0.8rem;
     }
 }
