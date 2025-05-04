@@ -1,0 +1,332 @@
+[
+  {
+    "image": "assets/images/AlissonBecker.jpg2.jpg",
+    "answer": "Alisson Becker",
+    "options": [
+      "Filip Jorgensen",
+      "Gabriel Sara",
+      "Ben White",
+      "Alisson Becker",
+      "Fabian Ruiz"
+    ]
+  },
+  {
+    "image": "assets/images/AndréOnana.jpg2.jpg",
+    "answer": "André Onana",
+    "options": [
+      "Axel Disasi",
+      "André Onana",
+      "Jeremie Frimpong",
+      "Tosin Adarabioyo",
+      "Davinson Sánchez"
+    ]
+  },
+  {
+    "image": "assets/images/AntoineGriezmann.jpg2.jpg",
+    "answer": "Antoine Griezmann",
+    "options": [
+      "Andreas Christensen",
+      "Sven Ulreich",
+      "William Saliba",
+      "David Raya",
+      "Antoine Griezmann"
+    ]
+  },
+  {
+    "image": "assets/images/AntonioRüdiger.jpg2.jpg",
+    "answer": "Antonio Rüdiger",
+    "options": [
+      "Antoine Rüdiger",
+      "Antoine Griezmann",
+      "Axel Disasi",
+      "Jeremie Frimpong",
+      "Gabriel"
+    ]
+  },
+  {
+    "image": "assets/images/BernadoSilva.jpg2.jpg",
+    "answer": "Bernardo Silva",
+    "options": [
+      "Bernardo Silva",
+      "Victor Nelsson",
+      "Mikel Merino",
+      "Dani Ceballos",
+      "Niklas Lomb"
+    ]
+  },
+  {
+    "image": "assets/images/BukayoSaka.jpg2.jpg",
+    "answer": "Bukayo Saka",
+    "options": [
+      "Ousmane Dembélé",
+      "André Onana",
+      "Bukayo Saka",
+      "Jonathan Tan",
+      "Davinson Sánchez"
+    ]
+  },
+  {
+    "image": "assets/images/CristianoRonaldo.jpg2.jpg",
+    "answer": "Cristiano Ronaldo",
+    "options": [
+      "Lionel Messi",
+      "William Saliba",
+      "Cristiano Ronaldo",
+      "Hiroki Ito",
+      "Pablo Torre"
+    ]
+  },
+  {
+    "image": "assets/images/DeclanRice.jpg2.jpg",
+    "answer": "Declan Rice",
+    "options": [
+      "Mikel Merino",
+      "Dani Ceballos",
+      "Declan Rice",
+      "Filip Jorgensen",
+      "Phil Foden"
+    ]
+  },
+  {
+    "image": "assets/images/ErlingHaaland.jpg2.jpg",
+    "answer": "Erling Haaland",
+    "options": [
+      "Erling Haaland",
+      "Alisson Becker",
+      "Lucas Hernandez",
+      "Victor Nelsson",
+      "Luca Modrić"
+    ]
+  },
+  {
+    "image": "assets/images/FlorianWirtz.jpg2.jpg",
+    "answer": "Florian Wirtz",
+    "options": [
+      "Robert Sánchez",
+      "William Saliba",
+      "Bernado Silva",
+      "Gabriel Jesus",
+      "Florian Wirtz"
+    ]
+  },
+  {
+    "image": "assets/images/HarryKane.jpg2.jpg",
+    "answer": "Harry Kane",
+    "options": [
+      "Hakim Ziyeeh",
+      "Harry Kane",
+      "Mikel Merino",
+      "Thibaut Courtois",
+      "Pablo Torre"
+    ]
+  },
+  {
+    "image": "assets/images/JamalMusiala.jpg2.jpg",
+    "answer": "Jamal Musiala",
+    "options": [
+      "Jamal Musiala",
+      "Lamine Yamal",
+      "David Raya",
+      "William Saliba",
+      "Niklas Lomb"
+    ]
+  },
+  {
+    "image": "assets/images/JudeBellingham.jpg2.jpg",
+    "answer": "Jude Bellingham",
+    "options": [
+      "Jonathan Tan",
+      "Axel Disasi",
+      "Alejandro Balde",
+      "Jude Bellingham",
+      "Alphonso Davies"
+    ]
+  },
+  {
+    "image": "assets/images/KevinDeBruyne.jpg2.jpg",
+    "answer": "Kevin De Bruyne",
+    "options": [
+      "Vigil van Dijk",
+      "Kevin De Bruyne",
+      "Lee Kang-in",
+      "Alisson Becker",
+      "Sven Ulreich"
+    ]
+  },
+  {
+    "image": "assets/images/KylianMbappe.jpg2.jpg",
+    "answer": "Kylian Mbappé",
+    "options": [
+      "Sadio Mané",
+      "Ousmane Dembélé",
+      "Kylian Mbappé",
+      "Tosin Adarabioyo",
+      "Jeremie Frimpong"
+    ]
+  },
+  {
+    "image": "assets/images/LamineYamal.jpg2.jpg",
+    "answer": "Lamine Yamal",
+    "options": [
+      "Hakim Ziyeeh",
+      "Rodri",
+      "Jamal Musiala",
+      "Gabriel Sara",
+      "Lamine Yamal"
+    ]
+  },
+  {
+    "image": "assets/images/LionelMessi.jpg2.jpg",
+    "answer": "Lionel Messi",
+    "options": [
+      "Cristiano Ronaldo",
+      "Erling Haaland",
+      "Lionel Messi",
+      "Ben White",
+      "Robert Lewandowski"
+    ]
+  },
+  {
+    "image": "assets/images/LukaModric.jpg2.jpg",
+    "answer": "Luka Modrić",
+    "options": [
+      "Toni Kroos",
+      "Thomas Partey",
+      "Riccardo Calafiori",
+      "David Raya",
+      "Luka Modrić"
+    ]
+  },
+  {
+    "image": "assets/images/MartinOdegaard.jpg2.jpg",
+    "answer": "Martin Ødegaard",
+    "options": [
+      "Martin Ødegaard",
+      "Fabian Ruiz",
+      "Manuel Neuer",
+      "Mikel Merino",
+      "Filip Jorgensen"
+    ]
+  },
+  {
+    "image": "assets/images/MohamedSalah.jpg2.jpg",
+    "answer": "Mohamed Salah",
+    "options": [
+      "Thibaut Courtois",
+      "Dani Ceballos",
+      "Mohamed Salah",
+      "Declan Rice",
+      "Bernado Silva"
+    ]
+  },
+  {
+    "image": "assets/images/PhilFoden.jpg2.jpg",
+    "answer": "Phil Foden",
+    "options": [
+      "Filip Jorgesen",
+      "Phil Foden",
+      "David Raya",
+      "Gabriel Sara",
+      "Sven Ulreich"
+    ]
+  },
+  {
+    "image": "assets/images/RobertLewandowski.jpg2.jpg",
+    "answer": "Robert Lewandowski",
+    "options": [
+      "Andreas Christensen",
+      "Robert Sanchez",
+      "Victor Nelsson",
+      "Alphonso Davies",
+      "Robert Lewandowski"
+    ]
+  },
+  {
+    "image": "assets/images/Rodri.jpg2.jpg",
+    "answer": "Rodri",
+    "options": [
+      "Toni Kroos",
+      "Rodri",
+      "Robert Lewandowski",
+      "Ben White",
+      "Itiroki Ito"
+    ]
+  },
+  {
+    "image": "assets/images/SadioMané.jpg2.jpg",
+    "answer": "Sadio Mané",
+    "options": [
+      "Jonathan Tan",
+      "Dayot Upamecano",
+      "Victor Osimhen",
+      "Sadio Mané",
+      "André Onana"
+    ]
+  },
+  {
+    "image": "assets/images/SonHeung-min.png2.png",
+    "answer": "Son Heung-min",
+    "options": [
+      "Lee Kang-in",
+      "Itiroki Ito",
+      "Son Heung-min",
+      "Pablo Torre",
+      "Andreas Christensen"
+    ]
+  },
+  {
+    "image": "assets/images/ToniKroos.jpg2.jpg",
+    "answer": "Toni Kroos",
+    "options": [
+      "Fabian Ruiz",
+      "Toni Kroos",
+      "Thibaut Courtois",
+      "Antoine Griezmann",
+      "Florian Wirtz"
+    ]
+  },
+  {
+    "image": "assets/images/VictorOsimhen.jpg2.jpg",
+    "answer": "Victor Osimhen",
+    "options": [
+      "André Onana",
+      "Sadio Mané",
+      "Vincent Aboubakar",
+      "Bukayo Saka",
+      "Victor Osimhen"
+    ]
+  },
+  {
+    "image": "assets/images/VigilvanDijk.jpg2.jpg",
+    "answer": "Vigil van Dijk",
+    "options": [
+      "Victor Nelsson",
+      "Kevin De Bruyne",
+      "Vigil van Dijk",
+      "Harry Kane",
+      "Sven Ulreich"
+    ]
+  },
+  {
+    "image": "assets/images/VincentAboubakar.jpg2.jpg",
+    "answer": "Vincent Aboubakar",
+    "options": [
+      "Dayot Upamecano",
+      "Jonathan Tan",
+      "Ousmane Dembélé",
+      "Vincent Aboubakar",
+      "Victor Osimhen"
+    ]
+  },
+  {
+    "image": "assets/images/ViniciusJr.jpg2.jpg",
+    "answer": "Vinicius Jr",
+    "options": [
+      "Vinicius Jr",
+      "Jude Bellingham",
+      "Antonio Rüdiger",
+      "Davinson Sanchez",
+      "Axel Disasi"
+    ]
+  }
+]
