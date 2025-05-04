@@ -9,12 +9,12 @@ const incorrect = document.getElementById("incorrect");
 const restartButton = document.getElementById("restart-btn");
 
 //Declare needed variables
-let currentQuestion = 0;
-let correctScore = 0;
-let incorrectScore = 0;
-let maxPlays = 5;
-let correctAnswer = "";
-let isAnswering = true;
+let currentQuestion = 0; // Tracks the current question number
+let correctScore = 0; // Stores the count of correct answers
+let incorrectScore = 0; // Stores the count of incorrect answers
+let maxPlays = 5; // Maximum number of questions to be played per game
+let correctAnswer = ""; // Holds the correct answer for the current question
+let isAnswering = true; // Tracks whether the game is currently accepting answers
 const questionData = [
   {
     image: "assets/images/AlissonBecker.jpg2.jpg",
