@@ -15,6 +15,21 @@ let incorrectScore = 0; // Stores the count of incorrect answers
 let maxPlays = 5; // Maximum number of questions to be played per game
 let correctAnswer = ""; // Holds the correct answer for the current question
 let isAnswering = true; // Tracks whether the game is currently accepting answers
+let questionData = [];
+
+async function loadQuestionsFromFile() {
+  try {
+    const response = await fetch("questions.json"); // Update path if needed
+    if (!response.ok) {
+      throw new Error("Failed to load questions.");
+    }
+    questionData = await response.json();
+    runGame();
+  } catch (error) {
+    message.textContent = "Error loading game data.";
+    console.error(error);
+  }
+}
 
 function runGame() {
   welcomePage.style.display = "none";
@@ -74,10 +89,10 @@ function loadQuestion() {
   });
 }
 
-startButton.addEventListener("click", (e) => {
+startButton.addEventListener("click", () => {
   welcomePage.style.display = "none";
   gameContainer.style.display = "block";
-  runGame();
+  loadQuestionsFromFile();
 });
 
 function checkAnswer() {
