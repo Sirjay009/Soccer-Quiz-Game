@@ -388,7 +388,7 @@ function loadQuestion() {
   playerImage.src = player.image;
 
   playerImage.onerror = function () {
-    this.src = "assets/images/default-player.jpg"; // Fallback image
+    this.src = "assets/images/pexels-diego-santacruz-252431696-12616082.jpg"; // Fallback image
     message.textContent = "Image not available";
   };
 
