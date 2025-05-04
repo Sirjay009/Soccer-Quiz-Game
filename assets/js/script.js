@@ -19,7 +19,7 @@ let questionData = [];
 
 async function loadQuestionsFromFile() {
   try {
-    const response = await fetch("questions.json"); // Update path if needed
+    const response = await fetch("data/questions.json"); // Update path
     if (!response.ok) {
       throw new Error("Failed to load questions.");
     }
