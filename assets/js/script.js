@@ -19,11 +19,25 @@ let questionData = [];
 
 async function loadQuestionsFromFile() {
   try {
-    const response = await fetch("data/questions.json"); // Update path
+    const response = await fetch("questions.json");
     if (!response.ok) {
-      throw new Error("Failed to load questions.");
+      throw new Error(`Failed to load questions. Status: ${response.status}`);
     }
-    questionData = await response.json();
+    const data = await response.json();
+    questionData = data;
+
+    // Validate question data format
+    questionData.forEach((question, index) => {
+      if (
+        !question.image ||
+        !question.answer ||
+        !Array.isArray(question.options) ||
+        question.options.length !== 4
+      ) {
+        console.error(`Invalid question data at index: ${index}`, question);
+      }
+    });
+
     runGame();
   } catch (error) {
     message.textContent = "Error loading game data.";
@@ -62,8 +76,15 @@ function loadQuestion() {
   } while (usedQuestions.includes(randomIndex));
 
   usedQuestions.push(randomIndex);
+
+  // Check if questionData[randomIndex] is defined
   const player = questionData[randomIndex];
-  correctAnswer = player.answer;
+  if (!player) {
+    console.error("Invalid question data at index:", randomIndex);
+    return; // Exit if there's an issue with the data
+  }
+
+  correctAnswer = player.answer; // This is where the error occurs
   playerImage.src = player.image;
 
   playerImage.onerror = function () {
