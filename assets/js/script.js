@@ -22,6 +22,7 @@ let correctScore = 0;
 let incorrectScore = 0;
 let maxPlays = 5;
 let correctAnswer = "";
+let isAnswering = true;
 const questionData = [
   {
     image: "assets/images/AlissonBecker.jpg2.jpg",
@@ -361,12 +362,15 @@ function runGame() {
   currentQuestion = 0;
   correctScore = 0;
   incorrectScore = 0;
+  isAnswering = true; // Reset flag here
+
   document.getElementById("score").textContent = "0";
   document.getElementById("incorrect").textContent = "0";
   score.textContent = correctScore;
   incorrect.textContent = incorrectScore;
   restartButton.style.display = "none";
   message.textContent = "";
+  
   loadQuestion();
 }
 
@@ -410,6 +414,10 @@ startButton.addEventListener("click", (e) => {
 });
 
 function checkAnswer() {
+  if (!isAnswering) return;
+
+  isAnswering = false; // Prevent further clicks
+
   if (this.innerText.toLowerCase() === correctAnswer.toLowerCase()) {
     message.textContent = "Congrats! Answer is Correct.";
     message.style.color = "green";
@@ -421,9 +429,28 @@ function checkAnswer() {
   }
   currentQuestion++;
   if (currentQuestion >= maxPlays) {
-    setTimeout(endGame, 3000); // Delay game over message
+    setTimeout(() => {
+      endGame();
+      isAnswering = false; // Do not re-enable on game end
+    }, 3000);
   } else {
-    setTimeout(loadQuestion, 1500);
+    setTimeout(() => {
+      loadQuestion();
+      isAnswering = true; // Re-enable after loading new question
+    }, 1500);
+  }
+}
+
+// Remove listeners during transitions
+function disableAnswers() {
+  for (let button in optionButtons) {
+    optionButtons[button].removeEventListener("click", checkAnswer);
+  }
+}
+
+function enableAnswers() {
+  for (let button in optionButtons) {
+    optionButtons[button].addEventListener("click", checkAnswer);
   }
 }
 
