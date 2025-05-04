@@ -4,17 +4,9 @@ const startButton = document.getElementById("start-btn");
 const gameContainer = document.getElementById("game-container");
 const playerImage = document.getElementById("random-image");
 const message = document.getElementById("messages");
-const scoreBoard = document.getElementsByClassName("scores");
 const score = document.getElementById("score");
 const incorrect = document.getElementById("incorrect");
 const restartButton = document.getElementById("restart-btn");
-const optionButtons = {
-  A: document.getElementById("optionA"),
-  B: document.getElementById("optionB"),
-  C: document.getElementById("optionC"),
-  D: document.getElementById("optionD"),
-  E: document.getElementById("optionE"),
-};
 
 //Declare needed variables
 let currentQuestion = 0;
@@ -370,7 +362,7 @@ function runGame() {
   incorrect.textContent = incorrectScore;
   restartButton.style.display = "none";
   message.textContent = "";
-  
+
   loadQuestion();
 }
 
@@ -400,11 +392,18 @@ function loadQuestion() {
   restartButton.style.display = "none";
 
   const choices = shuffleArray(player.options);
-  optionButtons.A.textContent = choices[0];
-  optionButtons.B.textContent = choices[1];
-  optionButtons.C.textContent = choices[2];
-  optionButtons.D.textContent = choices[3];
-  optionButtons.E.textContent = choices[4];
+  const answerContainer = document.getElementById("answer-buttons");
+  answerContainer.innerHTML = ""; // Clear previous buttons
+
+  choices.forEach((option) => {
+    const button = document.createElement("button");
+    button.classList.add("answer-btn");
+    button.textContent = option;
+    button.addEventListener("click", function () {
+      checkAnswer.call(this);
+    });
+    answerContainer.appendChild(button);
+  });
 }
 
 startButton.addEventListener("click", (e) => {
@@ -481,9 +480,3 @@ function shuffleArray(array) {
 restartButton.addEventListener("click", () => {
   runGame();
 });
-
-for (let button in optionButtons) {
-  optionButtons[button].addEventListener("click", function () {
-    checkAnswer.call(this);
-  });
-}
