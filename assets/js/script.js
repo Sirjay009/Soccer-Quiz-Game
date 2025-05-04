@@ -457,6 +457,6 @@ restartButton.addEventListener("click", () => {
 
 for (let button in optionButtons) {
   optionButtons[button].addEventListener("click", function () {
-    checkAnswer.call(this); // Explicitly bind 'this'
+    checkAnswer.call(this);
   });
 }
