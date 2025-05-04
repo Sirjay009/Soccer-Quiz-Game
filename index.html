@@ -15,45 +15,54 @@
   </head>
 
   <body>
-    <div id="welcome-page" class="container">
+    <header id="welcome-page" class="container">
       <h1>Welcome!</h1>
       <h2>Let's test your soccer⚽ knowledge</h2>
       <p>Please click the start button to begin when you are ready</p>
       <button id="start-btn">Start</button>
-    </div>
+    </header>
 
-    <!--Game section-->
-    <div id="game-container" class="container">
-      <h2>Who's this?</h2>
+    <main>
+      <!--Game section-->
+      <section id="game-container" class="container">
+        <h2>Who's this?</h2>
 
-      <div id="game-grid">
-        <img
-          id="random-image"
-          src="assets/images/AlissonBecker.jpg2.jpg"
-          alt="Random player image"
-          width="190"
-          height="290"
-        />
+        <div id="game-grid">
+          <img
+            id="random-image"
+            src="assets/images/AlissonBecker.jpg2.jpg"
+            alt="Random player image"
+            width="190"
+            height="290"
+          />
 
-        <div id="option-container">
-          <button class="option-btn" id="optionA"></button>
-          <button class="option-btn" id="optionB"></button>
-          <button class="option-btn" id="optionC"></button>
-          <button class="option-btn" id="optionD"></button>
-          <button class="option-btn" id="optionE"></button>
+          <div id="option-container">
+            <button class="option-btn" id="optionA"></button>
+            <button class="option-btn" id="optionB"></button>
+            <button class="option-btn" id="optionC"></button>
+            <button class="option-btn" id="optionD"></button>
+            <button class="option-btn" id="optionE"></button>
+          </div>
         </div>
-      </div>
 
-      <!--Message section-->
-      <div class="message-grid">
-        <div id="messages"></div>
-        <div id="score-area">
-          <p class="scores">Correct Answers:<span id="score">0</span></p>
-          <p class="scores">Incorrect Answers:<span id="incorrect">0</span></p>
+        <!--Message section-->
+        <div class="message-grid">
+          <div id="messages"></div>
+          <div id="score-area">
+            <p class="scores">Correct Answers:<span id="score">0</span></p>
+            <p class="scores">
+              Incorrect Answers:<span id="incorrect">0</span>
+            </p>
+          </div>
+          <button id="restart-btn">Restart</button>
         </div>
-        <button id="restart-btn">Restart</button>
-      </div>
-    </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Soccer Quiz Game by Chima Obutte. All rights reserved.</p>
+    </footer>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>
