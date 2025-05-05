@@ -158,18 +158,19 @@ function enableAnswers() {
 }
 
 function incrementScore() {
-  let oldScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = ++oldScore;
+  correctScore++;
+  document.getElementById("score").innerText = correctScore;
 }
 
 function incrementWrongScore() {
-  let oldScore = parseInt(document.getElementById("incorrect").innerText);
-  document.getElementById("incorrect").innerText = ++oldScore;
+  incorrectScore++;
+  document.getElementById("incorrect").innerText = incorrectScore;
 }
 
 function endGame() {
-  message.textContent = "Game over!";
-  restartButton.style.display = "block";
+  message.textContent = "";
+  restartButton.style.display = "none";
+  showResults();
 }
 
 function shuffleArray(array) {
@@ -184,3 +185,35 @@ function shuffleArray(array) {
 restartButton.addEventListener("click", () => {
   runGame();
 });
+
+function showResults() {
+  gameContainer.style.display = "none";
+  const resultsContainer = document.getElementById("results-container");
+  const finalScoreText = document.getElementById("final-score");
+  const feedbackMessage = document.getElementById("feedback-message");
+  const playAgainBtn = document.getElementById("play-again-btn");
+
+  resultsContainer.style.display = "flex";
+
+  finalScoreText.textContent = `You got ${correctScore} out of ${maxPlays} questions right.`;
+
+  const accuracy = (correctScore / maxPlays) * 100;
+  let feedback;
+
+  if (accuracy === 100) {
+    feedback = "⚽ Incredible! You got a perfect score!";
+  } else if (accuracy >= 80) {
+    feedback = "🔥 Awesome! You're a soccer genius!";
+  } else if (accuracy >= 50) {
+    feedback = "👍 Good job! But there's room for improvement.";
+  } else {
+    feedback = "😅 Keep practicing! You'll get better.";
+  }
+
+  feedbackMessage.textContent = feedback;
+
+  playAgainBtn.onclick = () => {
+    resultsContainer.style.display = "none";
+    runGame();
+  };
+}
