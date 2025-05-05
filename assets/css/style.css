@@ -224,6 +224,17 @@ button:hover {
   background-color: #2980b9;
 }
 
+#results-container {
+  text-align: center;
+  gap: 1rem;
+}
+
+#feedback-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
 footer {
   display: flex;
   justify-content: center; /* Centers horizontally */
