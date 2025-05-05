@@ -124,9 +124,33 @@ I manually tested this project to determine site usability, responsiveness and i
 
 ### Solved bugs
 
-- After deployment, the entire game page kept overflowing out of the game container creating a scroll effect on all screens. I figured out the issue was coming from the entire height of my game-container. I debuged this issue by first resizing and reloading the images. I went ahead to use the flexbox to place the image tag and options container side by side to cut down on the height. Finally, I used the code - ::-webkit.scrollbar- to remove the scroll bars that persisted.
+- The game mostly shows same question multiple times because loadQuestion() randomly selects questions without tracking used ones. To fix this, I introduced and maintained an array of used question indices.
 
-- In trying to comply with the mobile first design principle, I noticed the game displayed differently on larger screens. To ensure greater user experience and display game better, I used @media query to resize some elements.
+- The answer check was case-sensitive (this.innerText === correctAnswer), which may cause correct answers to be marked wrong. I fixed this by making comparison case-insensitive.
+
+- Users can continue to click on answers during the transition between questions, which results in unintended score changes. This issue also occurs when the restart button appears at the end of the quiz, allowing users to manipulate scores by clicking repeatedly. To fix this, I disabled input during transitions and re-enable it when appropriate by adding an "isAnswering" flag and updating the checkAnswer() and runGame() functions.
+
+- Scores might not reset correctly between games. To fix this, I updated the runGame() function and ensured proper score initializzation.
+
+- The game has no error handling for missing images. To fix this, I added error handling for missing images while also creating a fallback image in event image upload fails.
+
+- Variable naming inconsistency (camelCase and PascalCase) was fixed by consistently using camelCase for all variables.
+
+- Unused variables including 'play', 'options', and 'scoreBoard' were deleted to clean up the code and avoid potential confusion or unintended behavior.
+
+- I refactored the JavaScript code by moving the question data to an external `questions.json` file for better data management while also adding a function that fetches data from the file and ensures proper error handling during data retrieval.
+
+- Upon moving the question data to an external `questions.json` file, the question data won't load on the game page as it kept outputting an 'Invalid question data at index: 0' error message and subsequently, a 'Failed to load questions. Status: 404' error message. To fix these bugs, I restructured the question data from 'image, options, answer' to 'image, answer, options', repositioned the file to the root directory and ensured to use the correct path ("questions.json") to fetch the file.
+
+- I created answer buttons dynamically based on the options in each question. To achieve this, I removed the hardcoded option buttons from the HTML and created/appended buttons in JavaScript based on the number of options in the current question.
+
+- Further more, I also refactored the README.md file using effective Markdown in the documentation and removing all HTML tags, to improve readability and structure, making it easier for others to understand and navigate through the project.
+
+- I have also modified the index.html file with semantic HTML elements to enhance the code's readability and structure and improve accessibility for assistive technologies and search engine optimization.
+
+- I fixed a content overflow visibility issue that persisted on mobile screens by changing overflow: hidden to overflow-y: auto, removing max-height constraints on .container, and ensuring body and main use flex in a way that allows vertical growth in the style.css file.
+
+- I added an additional 'Player Feedback and Stats' feature to display final result and performanance at the end of each round of the game. The correctScore wasn't updating correctly resulting in inaccurate tallying of final result from each round of play. I fixed this bug by updating the the global correctScore variable directly in the incrementScore() and incrementWrongScore() functions.
 
 ### Unfixed Bugs
 
