@@ -51,7 +51,7 @@ In achieving the user and app developer goals, i have created a two-paged pictur
 
 ### The Restart Button
 
-A restart button is provided at the end of the game to enable users refresh the game and start a new game.
+- A restart button is provided at the end of the game to enable users refresh the game and start a new game.
 
 ## Technology Used
 
@@ -160,15 +160,15 @@ The site was deployed to GitHub pages using the following steps:
 - Go to the 'Environments' section on the right-hand side and click on 'github-pages'
 - Click on the URL displayed to see the live deployed site.
 
-The live link can be found here - [title](https://sirjay009.github.io/Soccer-Quiz-Game/)
+The live link can be found here - [Soccer Quiz Game](https://sirjay009.github.io/Soccer-Quiz-Game/)
 
 ## Credits
 
-- The favicon link code was taken from [title](https://www.w3schools.com)
+- The favicon link code was taken from [w3schools](https://www.w3schools.com)
 
 - The increment scores code was taken from the CI love Maths Project
 
-- The scrollbar debug code was taken from [title](https://www.youtube.com/c/r3habmedia)
-Pieces of code for the general styling of the project was also taken from [title](https://www.w3schools.com) , [title](https://www.codedamn.com) and [title](https://www.youtube.com/c/TheWheelchairGuy)
+- The scrollbar debug code was taken from [r3habmedia](https://www.youtube.com/c/r3habmedia)
+Pieces of code for the general styling of the project was also taken from [w3schools](https://www.w3schools.com) , [Codedamn](https://www.codedamn.com) and [The Wheel Chair Guy](https://www.youtube.com/c/TheWheelchairGuy)
 
-- I also utilized a plethora of online resources and tutorials including [title](https://stackoverflow.com/), [title](https://www.youtube.com/@WebDevSimplified), [title](https://www.shecodes.io/), [title](https://www.geeksforgeeks.org/),  to accomplish this project.
+- I also utilized a plethora of online resources and tutorials including [Stackoverflow](https://stackoverflow.com/), [title](https://www.youtube.com/@WebDevSimplified), [Shecodes](https://www.shecodes.io/), [Geeks for Geeks](https://www.geeksforgeeks.org/),  to accomplish this project.
