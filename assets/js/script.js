@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+/* jshint esversion: 8 */
 //Get DOM elements
 const welcomePage = document.getElementById("welcome-page");
 const startButton = document.getElementById("start-btn");
@@ -141,19 +143,6 @@ function checkAnswer() {
       loadQuestion();
       isAnswering = true; // Re-enable after loading new question
     }, 1500);
-  }
-}
-
-// Remove listeners during transitions
-function disableAnswers() {
-  for (let button in optionButtons) {
-    optionButtons[button].removeEventListener("click", checkAnswer);
-  }
-}
-
-function enableAnswers() {
-  for (let button in optionButtons) {
-    optionButtons[button].addEventListener("click", checkAnswer);
   }
 }
 
