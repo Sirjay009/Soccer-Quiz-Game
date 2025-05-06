@@ -1,6 +1,6 @@
 # Soccer⚽ Quiz Game
 
-![A screen shot of the game page of the soccer quiz game](docs/testing.images/Capture.PNG1.PNG)
+![A screen shot of the game page of the soccer quiz game](docs/testing.images/SoccerGameQuizHomePage.PNG)
 
 The Soccer Quiz Game is an online game app for football lovers irrespective of age. It aims at entertaining and testing soccer lovers' knowledge of the identity of some of the game's most decorated players.
 
