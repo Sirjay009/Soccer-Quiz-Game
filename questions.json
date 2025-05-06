@@ -33,7 +33,7 @@
     ]
   },
   {
-    "image": "assets/images/AntonioRüdiger.jpg2.jpg",
+    "image": "assets/images/AntonioRüdiger.webp",
     "answer": "Antonio Rüdiger",
     "options": [
       "Antonio Rüdiger",
@@ -220,7 +220,7 @@
     ]
   },
   {
-    "image": "assets/images/PhilFoden.jpg2.jpg",
+    "image": "assets/images/PhilFoden.jpeg",
     "answer": "Phil Foden",
     "options": [
       "Filip Jorgesen",
@@ -327,6 +327,314 @@
       "Antonio Rüdiger",
       "Davinson Sanchez",
       "Axel Disasi"
+    ]
+  },
+  {
+    "image": "assets/images/DominikSzoboszlai.jpg",
+    "answer": "Dominik Szoboszlai",
+    "options": [
+      "Mauro Junior",
+      "Frank Navarro",
+      "Dominik Szoboszlai",
+      "Tommaso Baldanzi",
+      "Lewis Hall"
+    ]
+  },
+  {
+    "image": "assets/images/ThibautCourtois.jpg",
+    "answer": "Thibaut Courtois",
+    "options": [
+      "Lloyd Kelly",
+      "Oliver Edvardsen",
+      "Ronald Hernández",
+      "Tajon Buchanan",
+      "Thibaut Courtois"
+    ]
+  },
+  {
+    "image": "assets/images/SachaBoey.jpg",
+    "answer": "Sacha Boey",
+    "options": [
+      "Sacha Boey",
+      "Arturo Vidal",
+      "Arjen Robben",
+      "Thomas Lemar",
+      "Paulo Dybala"
+    ]
+  },
+  {
+    "image": "assets/images/RiccardoCalafiori.jpg",
+    "answer": "Riccardo Calafiori",
+    "options": [
+      "Gerd Mueller",
+      "Riccardo Calafiori",
+      "Marco Verratti",
+      "Christian Eriksen",
+      "Ivan Perisic"
+    ]
+  },
+  {
+    "image": "assets/images/RodrigoRiquelme.png",
+    "answer": "Rodrigo Riquelme",
+    "options": [
+      "Kalidou Koulibaly",
+      "Ederson",
+      "Rodrigo Riquelme",
+      "Dries Mertens",
+      "Marco Reus"
+    ]
+  },
+  {
+    "image": "assets/images/TajonBuchanan.jpg",
+    "answer": "Tajon Buchanan",
+    "options": [
+      "Fabio Cannavaro",
+      "Jan Oblak",
+      "Zlatan Ibrahimovic",
+      "Tajon Buchanan",
+      "Hirving Lozano"
+    ]
+  },
+  {
+    "image": "assets/images/LloydKelly.png",
+    "answer": "Lloyd Kelly",
+    "options": [
+      "Zico",
+      "Edinson Cavani",
+      "Gonzalo Martinez",
+      "Raphael Varane",
+      "Lloyd Kelly"
+    ]
+  },
+  {
+    "image": "assets/images/GoncaloRamos.png",
+    "answer": "Goncalo Ramos",
+    "options": [
+      "Goncalo Ramos",
+      "Paul Gascoigne",
+      "Timo Werner",
+      "Mats Hummels",
+      "Casemiro"
+    ]
+  },
+  {
+    "image": "assets/images/SamuelChukwueze.jpg",
+    "answer": "Samuel Chukwueze",
+    "options": [
+      "Emmanuel Adebayo",
+      "Samuel Chukwueze",
+      "Amobi Ezeaku",
+      "Usman Barau",
+      "Henry Ozoemena"
+    ]
+  },
+  {
+    "image": "assets/images/LukášHrádecký.jpg",
+    "answer": "Lukáš Hrádecký",
+    "options": [
+      "Ante Rebic",
+      "Nabil Fekir",
+      "Lukáš Hrádecký",
+      "Marcos Alonso",
+      "Matthijs de Ligt"
+    ]
+  },
+  {
+    "image": "assets/images/RubenDias.jpg",
+    "answer": "Ruben Dias",
+    "options": [
+      "Xavi",
+      "Radamel Falcao",
+      "Toby Alderweireld",
+      "Ruben Dias",
+      "Thomas Lemar"
+    ]
+  },
+  {
+    "image": "assets/images/RonaldHernández.jpg",
+    "answer": "Ronald Hernández",
+    "options": [
+      "Kevin De Bruyne",
+      "Marcelo",
+      "Denis Cheryshev",
+      "Kieran Trippier",
+      "Ronald Hernández"
+    ]
+  },
+  {
+    "image": "assets/images/KarimAdeyemi.jpg",
+    "answer": "Karim Adeyemi",
+    "options": [
+      "Karim Adeyemi",
+      "Josh Acheampong",
+      "Jacob Ramsey",
+      "Ansu Fati",
+      "Ola Aina"
+    ]
+  },
+  {
+    "image": "assets/images/BertrandTraoré.jpg",
+    "answer": "Bertrand Traoré",
+    "options": [
+      "Fabinho",
+      "Bertrand Traoré",
+      "Ethan Nwaneri",
+      "Alvaro Morata",
+      "Manuel Lazzari"
+    ]
+  },
+  {
+    "image": "assets/images/ManuelLazzari.jpg",
+    "answer": "Manuel Lazzari",
+    "options": [
+      "Tommaso Baldanzi",
+      "Dominik Szoboszlai",
+      "Manuel Lazzari",
+      "Adrien Rabiot",
+      "Carlos Alberto"
+    ]
+  },
+  {
+    "image": "assets/images/OlaAina.webp",
+    "answer": "Ola Aina",
+    "options": [
+      "Karim Adeyemi",
+      "Bukayo Saka",
+      "Jeremie Frimpong",
+      "Ola Aina",
+      "Paul Pogba"
+    ]
+  },
+  {
+    "image": "assets/images/JackGrealish.jpg",
+    "answer": "Jack Grealish",
+    "options": [
+      "Fabio Cannavaro",
+      "Thiago Alcantara",
+      "Isco",
+      "Roberto Firmino",
+      "Jack Grealish"
+    ]
+  },
+  {
+    "image": "assets/images/JérémyDoku.png",
+    "answer": "Jérémy Doku",
+    "options": [
+      "Jérémy Doku",
+      "Manuel Lazzari",
+      "Brian Brobbey",
+      "Josh Acheampong",
+      "Jacob Ramsey"
+    ]
+  },
+  {
+    "image": "assets/images/EthanNwaneri.png",
+    "answer": "Ethan Nwaneri",
+    "options": [
+      "Jérémy Doku",
+      "Ethan Nwaneri",
+      "William Saliba",
+      "Samuel Chukwueze",
+      "Ansu Fati"
+    ]
+  },
+  {
+    "image": "assets/images/WilliamSaliba.webp",
+    "answer": "William Saliba",
+    "options": [
+      "Chido Obi-Martin",
+      "Ethan Nwaneri",
+      "William Saliba",
+      "William Troost-Ekong",
+      "Josh Acheampong"
+    ]
+  },
+  {
+    "image": "assets/images/AlexanderIsak.webp",
+    "answer": "Alexander Isak",
+    "options": [
+      "Antonio Rüdiger",
+      "Bertrand Traoré",
+      "William Saliba",
+      "Alexander Isak",
+      "Karim Adeyemi"
+    ]
+  },
+  {
+    "image": "assets/images/BrianBrobbey.jpg",
+    "answer": "Brian Brobbey",
+    "options": [
+      "Dele Alli",
+      "Bertrand Traoré",
+      "Usman Barau",
+      "Sacha Boey",
+      "Brian Brobbey"
+    ]
+  },
+  {
+    "image": "assets/images/OliverEdvardsen.jpg",
+    "answer": "Oliver Edvardsen",
+    "options": [
+      "Oliver Edvardsen",
+      "Alex Sandro",
+      "Dani Carvajal",
+      "Diego Godin",
+      "Brian Brobbey"
+    ]
+  },
+  {
+    "image": "assets/images/KanuNwankwo.jpg",
+    "answer": "Kanu Nwankwo",
+    "options": [
+      "Oliver Edvardsen",
+      "Kanu Nwankwo",
+      "Sunday Oliseh",
+      "Taribo West",
+      "Jay-Jay Okocha"
+    ]
+  },
+  {
+    "image": "assets/images/JayJayOkocha.webp",
+    "answer": "Jay-Jay Okocha",
+    "options": [
+      "Uche Okechukwu",
+      "Kanu Nwankwo",
+      "Jay-Jay Okocha",
+      "Wilson Oruma",
+      "Emmanuel Amunike"
+    ]
+  },
+  {
+    "image": "assets/images/JustinKluivert.jpg",
+    "answer": "Justin Kluivert",
+    "options": [
+      "Marco van Basten",
+      "Ruud van Nistelrooy",
+      "Gonzalo Higuain",
+      "Justin Kluivert",
+      "Keylor Navas"
+    ]
+  },
+  {
+    "image": "assets/images/WilliamTroostEkong.jpg",
+    "answer": "William Troost-Ekong",
+    "options": [
+      "Wilfred Ndidi",
+      "David Alaba",
+      "Samuel Chukwueze",
+      "Sacha Boey",
+      "William Troost-Ekong"
+    ]
+  },
+  {
+    "image": "assets/images/WilfredNdidi.jpg",
+    "answer": "Wilfred Ndidi",
+    "options": [
+      "Wilfred Ndidi",
+      "Ola Aina",
+      "Brian Brobbey",
+      "Henry Ozoemena",
+      "William Troost-Ekong"
     ]
   }
 ]
