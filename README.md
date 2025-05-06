@@ -10,18 +10,21 @@ The Soccer Quiz Game is an online game app for football lovers irrespective of a
 - As a user, i want to be able to test my knowledge of football players while also being entertained.
 - As a user, i want to be able to know the right answer when i fail a question.
 - As a user, i want to be able to access the game at any time of the day.
+- As a user, i want to be able to see my overall performance at the end of the game.
 
 ## Game Developer
 
 - As the game developer, i want to be able to create a soccer quiz game every football lover can enjoy irrespective of age.
 - As the game developer, i want to be able to welcome users to my game app and give them to opportunity to begin when they are ready.
 - As the game developer, i want to be able to test football lovers' knowledge of some of their favorite players.
-- As the game developer, i want to be able to provide players, answer options to select the right answer from.
+- As the game developer, i want to be able to provide users, answer options to select the right answer from.
 - As the game developer, i want to be able to immediately notify players of their correctly and incorrectly picked answers.
-- As the game developer, i want to be able to enable players instantly see their correct and incorrect game scores as they play.
-- As the game developer, i want to be able to enable players reset and restart the game after 5 plays.
+- As the game developer, i want to be able to enable users see in real-time, a score counter as they play.
+- As the game developer, i want to be able to ensure users are not able to cheat by selecting more than one answer for every question.
+- As the game developer, i want to be able to enable users enjoy 20 plays per round.
+- As the game developer, i want to be able to display the final result and performance to users at the end of each round of play.
 
-![A screen shot from amiresponsive website confirming the responsiveness of the project on all screens](docs/testing.images/Capture.PNG)
+![A screen shot from amiresponsive website confirming the responsiveness of the project on all screens](docs/testing.images/AmIResponsive.PNG)
 
 ## Features
 
@@ -45,9 +48,13 @@ In achieving the user and app developer goals, i have created a two-paged pictur
 
 - Where a selected answer is right, a green-colored - "Congrats! Answer is Correct." - alert pops up and where the selected answer is wrong, a red-colored - "Incorrect! The answer was ${correctAnswer}" - pops up.
 
-- The Scoring Feature
+### The Scoring Feature
 
 - The idea behind including the scoring tracker feature is to keep track in real time of the number of players' won and lost plays. While the "correct" counter keeps track of number of correct answers scored by players, the "incorrect" counter tracks the number of players' wrong answers.
+
+### The Player Feedback and Stats
+
+- I created a final report assesment feature that reviews the overall performance of users after each play using their total scored points.
 
 ### The Restart Button
 
@@ -111,6 +118,7 @@ I manually tested this project to determine site usability, responsiveness and i
 | Upon arrival to the game page, please confirm the game loads | 100% |
 | Please use the option buttons to select an answer and see if you will get a feedback of correct or incorrect answer | 100% |
 | Please confirm if correct and incorrect answers increments accordingly in real time as you play | 100% |
+| Please confirm if a final score and perfomance is displayed at the end of the game | 100% |
 
 #### User responsive testing
 
@@ -128,9 +136,9 @@ I manually tested this project to determine site usability, responsiveness and i
 
 - The answer check was case-sensitive (this.innerText === correctAnswer), which may cause correct answers to be marked wrong. I fixed this by making comparison case-insensitive.
 
-- Users can continue to click on answers during the transition between questions, which results in unintended score changes. This issue also occurs when the restart button appears at the end of the quiz, allowing users to manipulate scores by clicking repeatedly. To fix this, I disabled input during transitions and re-enable it when appropriate by adding an "isAnswering" flag and updating the checkAnswer() and runGame() functions.
+- Users can continue to click on answers during the transition between questions, which results in unintended score changes. This issue also occurs when the restart button appears at the end of the quiz, allowing users to manipulate scores by clicking repeatedly. To fix this, I disabled input during transitions and re-enable it by adding an "isAnswering" flag while also updating the checkAnswer() and runGame() functions.
 
-- Scores might not reset correctly between games. To fix this, I updated the runGame() function and ensured proper score initializzation.
+- Scores might not reset correctly between games. To fix this, I updated the runGame() function to ensure proper score initializzation.
 
 - The game has no error handling for missing images. To fix this, I added error handling for missing images while also creating a fallback image in event image upload fails.
 
@@ -140,13 +148,13 @@ I manually tested this project to determine site usability, responsiveness and i
 
 - I refactored the JavaScript code by moving the question data to an external `questions.json` file for better data management while also adding a function that fetches data from the file and ensures proper error handling during data retrieval.
 
-- Upon moving the question data to an external `questions.json` file, the question data won't load on the game page as it kept outputting an 'Invalid question data at index: 0' error message and subsequently, a 'Failed to load questions. Status: 404' error message. To fix these bugs, I restructured the question data from 'image, options, answer' to 'image, answer, options', repositioned the file to the root directory and ensured to use the correct path ("questions.json") to fetch the file.
+- Upon moving the question data to an external `questions.json` file, the question data won't load on the game page as it kept outputting an 'Invalid question data at index: 0' error message and subsequently, a 'Failed to load questions. Status: 404' error message. To fix these bugs, I restructured the question data from 'image, options, answer' to 'image, answer, options'. I then repositioned the file to the root directory and ensured to use the correct path ("questions.json") to fetch the file in my JavaScript code.
 
 - I created answer buttons dynamically based on the options in each question. To achieve this, I removed the hardcoded option buttons from the HTML and created/appended buttons in JavaScript based on the number of options in the current question.
 
-- Further more, I also refactored the README.md file using effective Markdown in the documentation and removing all HTML tags, to improve readability and structure, making it easier for others to understand and navigate through the project.
+- Further more, I also refactored the README.md file by removing all HTML tags and replacing them with Markdown, to improve readability and structure.
 
-- I have also modified the index.html file with semantic HTML elements to enhance the code's readability and structure and improve accessibility for assistive technologies and search engine optimization.
+- I also modified the index.html file with semantic HTML elements to enhance the code's readability and structure and improve accessibility for assistive technologies and search engine optimization.
 
 - I fixed a content overflow visibility issue that persisted on mobile screens by changing overflow: hidden to overflow-y: auto, removing max-height constraints on .container, and ensuring body and main use flex in a way that allows vertical growth in the style.css file.
 
@@ -160,18 +168,31 @@ I manually tested this project to determine site usability, responsiveness and i
 
 ### HTML
 
-- The W3C validator-detected errors were corrected.
-- No errors were returned when re-ran on W3C validator after correction was effected.
+- The W3C validator detected no error.
 
 ### CSS
 
-- No errors were returned when css style sheet was run on the official (Jigsaw) validator.
+- No errors were returned when css style sheet was run on the official (Jigsaw) validator. However, it warned of a deprecated value (word-break: break-word;) which i corrected with a more modern equivalent. When i re-ran to revalidate, the warning was gone.
+
+### JavaScript
+
+I ran my JavaScript code on JSHint validator and it threw up a couple of issues including ;
+
+- " 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) ". I fixed this by adding the '/*jshint esversion: 6*/' configuration comment atop the JS file.
+
+- " 'async functions' is only available in ES8 (use 'esversion: 8') ". I fixed this by adding the '/*jshint esversion: 8*/' configuration comment atop the JS file.
+
+- It also identified 3 unused variables (optionButtons, disableAnswers, enableAnswers) which i fixed by deleting all completely.
+
+### Responsiveness
+
+- I confirmed responsiveness on all screens on [amiresponsive](https://ui.dev/amiresponsive).
 
 ### Accessibility
 
 - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighhouse in devtools.
 
-![Screen shot of 'lighthouse accessibility diagnosis' of Soccer Quiz Game](docs/testing.images/Capture.PNG6.PNG")
+![Screen shot of lighthouse accessibility diagnosis of Soccer Quiz Game](docs/testing.images/LighthouseReport.PNG)
 
 ## Deployment
 
@@ -196,3 +217,7 @@ The live link can be found here - [Soccer Quiz Game](https://sirjay009.github.io
 Pieces of code for the general styling of the project was also taken from [w3schools](https://www.w3schools.com) , [Codedamn](https://www.codedamn.com) and [The Wheel Chair Guy](https://www.youtube.com/c/TheWheelchairGuy)
 
 - I also utilized a plethora of online resources and tutorials including [Stackoverflow](https://stackoverflow.com/), [title](https://www.youtube.com/@WebDevSimplified), [Shecodes](https://www.shecodes.io/), [Geeks for Geeks](https://www.geeksforgeeks.org/),  to accomplish this project.
+
+- I am also grateful to the assessment team for the thorough insight, inputs and materials they availed me with.
+
+- Lastly, my profound gratitude goes to my then mentor, Alan Bushell, who aside from pointing me to a liturgy of materials also gave me tips and encouragement that not only helped me complete this project but also boosted my overall morale in seeing this program to the finish line.
