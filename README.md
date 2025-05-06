@@ -124,9 +124,9 @@ I manually tested this project to determine site usability, responsiveness and i
 
 5 users were asked to view the app on their mobile devices and/or tablets to provide any feedback on errors or page overlapping issues.
 
-| Feedback | Reaction |
+| Feedback | Fix |
 | ----------- | ----------- |
-| Users should be able to know from the welcome page how many plays per round before starting | Fixed |
+| No information about number of plays per round before clicking the 'Start' button | Text added to welcome page to include information |
 
 ## Bugs
 
